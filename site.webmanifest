@@ -1,7 +1,7 @@
 {
   "name": "American Legion Post 432 · Cambria",
   "short_name": "Post 432",
-  "start_url": "/",
+  "start_url": "./",
   "display": "browser",
   "background_color": "#faf8f3",
   "theme_color": "#0f2443",

@@ -226,6 +226,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 @media (max-width: 420px) { .brand img { width: 2.7rem; } .brand__name { font-size: 1.3rem; } .brand__place { font-size: .8rem; } .menu-button { padding-inline: .75rem; } }
 
 /* ---------- Announcement ---------- */
+/* Preview strip: shown only on the github.io test address (initPreview in site.js) */
+.preview-bar { background: var(--red-700); color: #fff; font-size: .92rem; }
+.preview-bar .wrap { padding-block: .5rem; text-align: center; }
+.preview-bar p { margin: 0; }
 .announcement { background: var(--gold-50); border-bottom: 1px solid #ecdcae; color: var(--navy-900); }
 .announcement[hidden] { display: none; }
 .announcement .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem 1rem; padding-block: .8rem; text-align: center; }
@@ -560,6 +564,7 @@ a.sponsor:hover { border-color: var(--navy-600); box-shadow: var(--shadow-sm); }
 .icon { width: 1.15em; height: 1.15em; vertical-align: -.18em; }
 
 @media print {
+  .preview-bar { display: none !important; }
   .topbar, .site-header, .announcement, .site-footer, .btn, .calendar-embed, .map-embed, .search-field { display: none !important; }
   body { background: #fff; font-size: 12pt; }
   .page-hero, .hero { background: none; color: #000; }

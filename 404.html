@@ -5,7 +5,8 @@
 <title>Page not found | American Legion Post 432</title>
 <meta name="description" content="Sorry, we couldn't find that page.">
 <meta name="robots" content="noindex">
-<base href="/">
+<script>/* Links on this page start from the site's top folder: "/" on legionpost432.com, "/<repo>/" on a github.io preview. */
+document.write('<base href="' + (/\.github\.io$/i.test(location.hostname) ? "/" + location.pathname.split("/")[1] + "/" : "/") + '">');</script>
 <!-- LAYOUT:HEAD START -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">

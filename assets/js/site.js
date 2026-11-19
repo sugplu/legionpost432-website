@@ -476,9 +476,24 @@
     });
   }
 
+  /* ---------- preview notice (only on the <account>.github.io test address) ---------- */
+  // Shows a "not live yet" strip and asks search engines not to list the preview.
+  // On www.legionpost432.com this does nothing, so there is nothing to remove at launch.
+  function initPreview() {
+    if (!/\.github\.io$/i.test(location.hostname)) return;
+    document.head.appendChild(el("meta", { name: "robots", content: "noindex" }));
+    document.body.insertBefore(el("div", { class: "preview-bar", role: "note" }, [
+      el("div", { class: "wrap" }, [el("p", {}, [
+        el("strong", { text: "Preview:" }),
+        " this is the proposed new website for American Legion Post 432. It isn't live yet. Once approved, it will replace legionpost432.com at the same address."
+      ])])
+    ]), document.body.firstChild);
+  }
+
   /* ---------- start ---------- */
   document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.classList.add("js");
+    initPreview();
     initTextSize();
     initNav();
     initCalendar();
