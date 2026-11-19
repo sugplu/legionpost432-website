@@ -1,0 +1,20 @@
+{
+  "heading": "Thank you to our 2026 Picnic in the Park sponsors",
+  "sponsors": [
+    { "name": "Cookie Crock Market", "level": "Commodore", "logo": "/media/sponsors/cookie-crock-market.png", "url": "" },
+    { "name": "Rotary Club of Cambria", "level": "Commodore", "logo": "/media/sponsors/rotary-club-of-cambria.png", "url": "" },
+    { "name": "Cambria Lions Club", "level": "Commodore", "logo": "/media/sponsors/cambria-lions-club.png", "url": "" },
+    { "name": "Harvey's Honey Huts", "level": "Commodore", "logo": "/media/sponsors/harveys-honey-huts.jpg", "url": "" },
+    { "name": "Linn's of Cambria", "level": "Patriot", "logo": "/media/sponsors/linns-of-cambria.jpg", "url": "" },
+    { "name": "Mission Country Disposal", "level": "Patriot", "logo": "/media/sponsors/mission-country-disposal.jpg", "url": "" },
+    { "name": "Cavalier Oceanfront Resort", "level": "Eagle", "logo": "/media/sponsors/cavalier-oceanfront-resort.png", "url": "" },
+    { "name": "Robin's Restaurant", "level": "Eagle", "logo": "/media/sponsors/robins-restaurant.png", "url": "" },
+    { "name": "David & Cindy Pierson", "level": "Eagle", "logo": "", "url": "" },
+    { "name": "Jack Posemsky Real Estate", "level": "Minuteman", "logo": "/media/sponsors/jack-posemsky-real-estate.jpg", "url": "" },
+    { "name": "Vialpando Construction", "level": "Minuteman", "logo": "/media/sponsors/vialpando-construction.jpg", "url": "" },
+    { "name": "Rick Valente Construction", "level": "Minuteman", "logo": "/media/sponsors/rick-valente-construction.jpg", "url": "" },
+    { "name": "Cambria Shores Inn", "level": "Minuteman", "logo": "/media/sponsors/cambria-shores-inn.jpg", "url": "" },
+    { "name": "Cambria Hardware Center", "level": "Minuteman", "logo": "/media/sponsors/cambria-hardware-center.jpg", "url": "" },
+    { "name": "The Sea Chest Oyster Bar", "level": "Minuteman", "logo": "/media/sponsors/sea-chest-oyster-bar.jpg", "url": "" }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "recurring": [
+    {
+      "key": "general-meeting",
+      "title": "General Meeting",
+      "repeats": "Once a month",
+      "week": "1st",
+      "weekday": "Wednesday",
+      "time": "6:00 PM",
+      "location": "Legion Dining Room, behind the Vets Hall",
+      "description": "Post 432 and Auxiliary general meetings. Dinner is served at 5:00 PM for members and guests.",
+      "audience": "Members & guests",
+      "showOnHome": true,
+      "skip": []
+    },
+    {
+      "key": "pancake-breakfast",
+      "title": "Pancake Breakfast",
+      "repeats": "Once a month",
+      "week": "3rd",
+      "weekday": "Saturday",
+      "time": "8:00 – 11:00 AM",
+      "location": "Legion Dining Room, behind the Vets Hall",
+      "description": "A hearty breakfast and good company — the best way to meet the Legion Family.",
+      "audience": "Everyone welcome",
+      "showOnHome": true,
+      "skip": []
+    },
+    {
+      "key": "bingo",
+      "title": "Auxiliary Bingo Night",
+      "repeats": "Once a month",
+      "week": "2nd",
+      "weekday": "Wednesday",
+      "time": "Doors 5:00 PM · Games 6:00 PM",
+      "location": "Legion Dining Room, behind the Vets Hall",
+      "description": "Monthly Bingo hosted by the American Legion Auxiliary, Unit 432.",
+      "audience": "Everyone welcome",
+      "showOnHome": true,
+      "skip": []
+    },
+    {
+      "key": "burgers-and-brew",
+      "title": "Burgers & Brew",
+      "repeats": "Every week",
+      "week": "1st",
+      "weekday": "Monday",
+      "time": "6:00 – 8:00 PM",
+      "location": "Club 432",
+      "description": "Burgers off the grill and a cold one at Club 432.",
+      "audience": "Members & guests",
+      "showOnHome": true,
+      "skip": []
+    },
+    {
+      "key": "taco-tuesday",
+      "title": "Taco Tuesday",
+      "repeats": "Every week",
+      "week": "1st",
+      "weekday": "Tuesday",
+      "time": "6:00 – 8:00 PM",
+      "location": "Club 432",
+      "description": "Tacos every Tuesday night at the Club.",
+      "audience": "Members & guests",
+      "showOnHome": true,
+      "skip": []
+    },
+    {
+      "key": "thursday-dinner",
+      "title": "Thursday Night Dinner",
+      "repeats": "Every week",
+      "week": "1st",
+      "weekday": "Thursday",
+      "time": "5:00 PM",
+      "location": "Legion Dining Room",
+      "description": "A home-cooked dinner from the Auxiliary — the menu changes every week. $12. Tickets go on sale at 5 PM, first come, first served.",
+      "audience": "Members & guests",
+      "showOnHome": true,
+      "skip": ["2026-11-26"]
+    }
+  ],
+  "featured": [
+    {
+      "title": "Memorial Day Ceremony",
+      "label": "Save the date",
+      "date": "2027-05-31",
+      "endDate": "",
+      "time": "Time to be announced",
+      "location": "Cambria Veterans Memorial, 1000 Main Street",
+      "summary": "Join Post 432 as we honor those who gave their lives in service to our country, and remember the comrades of our Post Everlasting.",
+      "image": "/media/images/picnic-salute.jpg",
+      "imageAlt": "Legionnaires salute during a ceremony on the lawn.",
+      "link": "post-everlasting.html",
+      "linkText": "About Post Everlasting"
+    },
+    {
+      "title": "46th Annual Fourth of July Picnic in the Park",
+      "label": "Save the date",
+      "date": "2027-07-04",
+      "endDate": "",
+      "time": "Details coming soon",
+      "location": "Shamel Park, 5455 Windsor Blvd., Cambria",
+      "summary": "Cambria's Fourth of July tradition returns — an opening ceremony, food, music, games, kids' races and the famous pie eating contest.",
+      "image": "/media/images/picnic-crowd.jpg",
+      "imageAlt": "Families gather on the lawn at Shamel Park for the Picnic in the Park.",
+      "link": "picnic.html",
+      "linkText": "About the Picnic"
+    }
+  ]
+}

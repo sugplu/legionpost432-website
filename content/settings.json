@@ -1,0 +1,10 @@
+{
+  "announcement": {
+    "show": true,
+    "text": "Welcome to our new website — same address, fresh look.",
+    "linkText": "Tell us what you think",
+    "link": "contact.html"
+  },
+  "contactEmail": "cambrialegion432@gmail.com",
+  "contactFormEndpoint": ""
+}

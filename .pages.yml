@@ -1,0 +1,302 @@
+# Pages CMS configuration — the "website editor" for American Legion Post 432.
+# Editors log in at https://app.pagescms.org and see simple forms for each item below.
+# Docs: https://pagescms.org/docs/configuration/
+
+media:
+  - name: images
+    label: Photos
+    input: media/images
+    output: /media/images
+    categories: [image]
+  - name: bugle
+    label: Bugle newsletters (PDF)
+    input: media/bugle
+    output: /media/bugle
+    categories: [document]
+  - name: docs
+    label: Forms & documents (PDF)
+    input: media/docs
+    output: /media/docs
+    categories: [document]
+  - name: sponsors
+    label: Sponsor logos
+    input: media/sponsors
+    output: /media/sponsors
+    categories: [image]
+
+content:
+  - name: settings
+    label: "Announcement banner"
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - name: announcement
+        label: Banner at the top of every page
+        type: object
+        fields:
+          - name: show
+            label: Show the banner?
+            type: boolean
+          - name: text
+            label: Message
+            type: text
+            description: "Keep it short — one or two sentences. Example: No Thursday dinner on Thanksgiving. Happy Thanksgiving!"
+          - name: linkText
+            label: Link text (optional)
+            type: string
+            description: "Example: Learn more"
+          - name: link
+            label: Link address (optional)
+            type: string
+            description: "A page on this site like events.html, or a full web address starting with https://"
+      - name: contactEmail
+        label: Email address for the contact form
+        type: string
+      - name: contactFormEndpoint
+        label: Contact form service address (leave blank unless your web helper set one up)
+        type: string
+
+  - name: events
+    label: "Events"
+    type: file
+    path: content/events.json
+    format: json
+    fields:
+      - name: featured
+        label: Special events (one-time events like Memorial Day or the Picnic)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.date} — {fields.title}"
+        fields:
+          - name: title
+            label: Event name
+            type: string
+            required: true
+          - name: label
+            label: Small label (optional)
+            type: string
+            description: "Example: Save the date"
+          - name: date
+            label: Date
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: endDate
+            label: End date (only for multi-day events)
+            type: date
+            default: ""
+            options:
+              format: yyyy-MM-dd
+          - name: time
+            label: Time
+            type: string
+            description: "Example: 11:00 AM – 5:00 PM"
+          - name: location
+            label: Where
+            type: string
+          - name: summary
+            label: Description
+            type: text
+          - name: image
+            label: Photo (optional)
+            type: image
+            options:
+              media: images
+          - name: imageAlt
+            label: Describe the photo in a few words (for blind visitors)
+            type: string
+          - name: link
+            label: Button link (optional)
+            type: string
+          - name: linkText
+            label: Button text (optional)
+            type: string
+      - name: recurring
+        label: Regular events (dates are calculated automatically)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title}"
+        fields:
+          - name: title
+            label: Event name
+            type: string
+            required: true
+          - name: repeats
+            label: How often?
+            type: select
+            options:
+              values: ["Every week", "Once a month"]
+          - name: week
+            label: Which week of the month? (only for "Once a month")
+            type: select
+            options:
+              values: ["1st", "2nd", "3rd", "4th", "Last"]
+          - name: weekday
+            label: Day of the week
+            type: select
+            options:
+              values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+          - name: time
+            label: Time
+            type: string
+            description: "Example: 6:00 – 8:00 PM"
+          - name: location
+            label: Where
+            type: string
+          - name: description
+            label: Short description
+            type: text
+          - name: audience
+            label: Who's welcome?
+            type: select
+            options:
+              values: ["Everyone welcome", "Members & guests", "Members only"]
+          - name: showOnHome
+            label: Show on the home page?
+            type: boolean
+          - name: skip
+            label: Skip these dates (holidays, cancellations)
+            type: date
+            list: true
+            options:
+              format: yyyy-MM-dd
+          - name: key
+            label: Internal name (don't change)
+            type: string
+            hidden: true
+
+  - name: officers
+    label: "Officers"
+    type: file
+    path: content/officers.json
+    format: json
+    fields:
+      - name: post
+        label: Post 432 officers
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Office, type: string }
+          - { name: name, label: Name (leave blank if open), type: string }
+      - name: committees
+        label: Post committee chairs
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Committee, type: string }
+          - { name: name, label: Name, type: string }
+      - name: sal
+        label: Sons of The American Legion officers
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Office, type: string }
+          - { name: name, label: Name (leave blank if open), type: string }
+      - name: auxiliary
+        label: Auxiliary officers
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Office, type: string }
+          - { name: name, label: Name (leave blank if open), type: string }
+
+  - name: bugle
+    label: "The Bugle newsletter"
+    type: file
+    path: content/bugle.json
+    format: json
+    fields:
+      - name: issues
+        label: Issues (newest is shown first automatically)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title}"
+        fields:
+          - name: title
+            label: Issue name
+            type: string
+            required: true
+            description: "Example: January 2027"
+          - name: date
+            label: Issue date
+            type: date
+            options:
+              format: yyyy-MM-dd
+          - name: file
+            label: The newsletter PDF
+            type: file
+            options:
+              media: bugle
+          - name: note
+            label: What's inside (optional)
+            type: text
+          - name: sample
+            label: Placeholder (turn OFF for real issues)
+            type: boolean
+
+  - name: everlasting
+    label: "Post Everlasting"
+    type: file
+    path: content/post-everlasting.json
+    format: json
+    fields:
+      - name: groups
+        label: Names by year
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.year}"
+        fields:
+          - name: year
+            label: Year
+            type: string
+            description: "Add the newest year at the top."
+          - name: names
+            label: Names (Last, First)
+            type: string
+            list: true
+
+  - name: sponsors
+    label: "Picnic sponsors"
+    type: file
+    path: content/sponsors.json
+    format: json
+    fields:
+      - name: heading
+        label: Heading
+        type: string
+        description: "Example: Thank you to our 2027 Picnic in the Park sponsors"
+      - name: sponsors
+        label: Sponsors
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.name} ({fields.level})"
+        fields:
+          - name: name
+            label: Sponsor name
+            type: string
+            required: true
+          - name: level
+            label: Level
+            type: select
+            options:
+              values: [Commodore, Patriot, Eagle, Minuteman, Friend]
+          - name: logo
+            label: Logo (optional)
+            type: image
+            options:
+              media: sponsors
+          - name: url
+            label: Website (optional)
+            type: string

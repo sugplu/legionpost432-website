@@ -1,0 +1,35 @@
+{
+  "post": [
+    { "title": "Commander", "name": "Dave Ehlers" },
+    { "title": "1st Vice Commander", "name": "Maureen Robles" },
+    { "title": "2nd Vice Commander", "name": "Brian Griffin" },
+    { "title": "Adjutant", "name": "John Ehlers" },
+    { "title": "Finance Officer", "name": "Phil Kispersky" },
+    { "title": "Service Officer", "name": "Rob Mastrantonio" },
+    { "title": "Chaplain", "name": "Chuck McMillen" },
+    { "title": "Judge Advocate", "name": "Jerry McKinnon" },
+    { "title": "Sergeant-at-Arms", "name": "Karina Tiwana" },
+    { "title": "Executive Committee", "name": "David Lackman" },
+    { "title": "Junior Past Commander", "name": "Terry Sheppard" },
+    { "title": "Historian", "name": "Jacob Rooker" }
+  ],
+  "committees": [
+    { "title": "Americanism", "name": "Brian Griffin" },
+    { "title": "The Bugle Editor", "name": "John Ehlers" },
+    { "title": "Troop Support (TS2)", "name": "David Pierson" }
+  ],
+  "sal": [
+    { "title": "Squadron Commander", "name": "" },
+    { "title": "Squadron Adjutant", "name": "Steve Kniffen" }
+  ],
+  "auxiliary": [
+    { "title": "President", "name": "Teri Salerno" },
+    { "title": "First Vice President", "name": "Mary Woeste" },
+    { "title": "Second Vice President", "name": "Karen Chrisman" },
+    { "title": "Treasurer", "name": "Maggie Balint" },
+    { "title": "Secretary", "name": "Jackie Hogan" },
+    { "title": "Sergeant-at-Arms", "name": "Yolanda Silvas" },
+    { "title": "Marshal", "name": "Roberta Vitols" },
+    { "title": "Parliamentarian", "name": "Tala Romero" }
+  ]
+}
