@@ -16,6 +16,7 @@
 <link rel="preload" href="assets/fonts/librecaslontext-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script>document.documentElement.classList.add("edits-pending");setTimeout(function(){document.documentElement.classList.remove("edits-pending")},1500);</script>
 <noscript><style>@media (max-width:1139px){.mobile-menu[hidden]{display:block}.menu-button{display:none}}</style></noscript>
 <meta property="og:site_name" content="American Legion Post 432 · Cambria, California">
 <meta property="og:type" content="website">
@@ -82,7 +83,13 @@
             <li><a href="auxiliary.html">American Legion Auxiliary<span>Unit 432</span></a></li>
           </ul>
         </li>
-        <li><a class="nav__link" href="bugle.html">The Bugle</a></li>
+        <li>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-news">News <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="nav__menu" id="menu-news" hidden>
+            <li><a href="news.html">News &amp; Photos<span>Stories and pictures from the Post</span></a></li>
+            <li><a href="bugle.html">The Bugle<span>Our monthly newsletter</span></a></li>
+          </ul>
+        </li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li class="nav__cta"><a class="btn btn--primary btn--sm" href="join.html">Join Post 432</a></li>
       </ul>
@@ -122,6 +129,12 @@
         <ul>
           <li><a href="sal.html">Sons of The American Legion</a></li>
           <li><a href="auxiliary.html">American Legion Auxiliary</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu__group">
+        <p class="mobile-menu__label">News</p>
+        <ul>
+          <li><a href="news.html">News &amp; Photos</a></li>
           <li><a href="bugle.html">The Bugle newsletter</a></li>
         </ul>
       </div>
@@ -139,32 +152,32 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="page-hero__media"><img src="media/images/picnic-cooks.jpg" alt="" width="1600" height="1200"></div>
+    <div class="page-hero__media"><img src="media/images/picnic-cooks.jpg" alt="" width="1600" height="1200" data-edit-img="s1.photo"></div>
     <div class="wrap">
       <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Events &amp; Calendar</li></ol>
-      <p class="eyebrow">Events &amp; Calendar</p>
-      <h1>There's always something going on</h1>
-      <p class="lead">Pancake breakfasts, Bingo nights, home-cooked dinners, meetings with guest speakers — and the biggest day of our year, the Fourth of July Picnic in the Park.</p>
+      <p class="eyebrow" data-edit="s1.small_label">Events &amp; Calendar</p>
+      <h1 data-edit="s1.title">There's always something going on</h1>
+      <p class="lead" data-edit="s1.intro" data-edit-type="rich" data-edit-count="1">Pancake breakfasts, Bingo nights, home-cooked dinners, meetings with guest speakers — and the biggest day of our year, the Fourth of July Picnic in the Park.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap sidebar-layout">
       <div>
-        <div class="section-head"><div><p class="eyebrow">Next few weeks</p><h2>Coming up</h2></div></div>
+        <div class="section-head"><div><p class="eyebrow" data-edit="s2.small_label">Next few weeks</p><h2 data-edit="s2.heading">Coming up</h2></div></div>
         <div data-render="upcoming" data-limit="12" data-days="35">
           <noscript><p class="noscript">Turn on JavaScript to see upcoming dates, or view the calendar below.</p></noscript>
         </div>
       </div>
       <aside class="stack">
         <div class="callout">
-          <p class="eyebrow">Where</p>
-          <h3>Legion Dining Room &amp; Club 432</h3>
-          <p>At the back of the Veterans Memorial Hall, 1000 Main Street, Cambria.</p>
-          <a class="btn btn--light btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=1000+Main+St+Cambria+CA+93428" rel="noopener">Get directions</a>
+          <p class="eyebrow" data-edit="s2.box_1.small_label">Where</p>
+          <h3 data-edit="s2.box_1.heading">Legion Dining Room &amp; Club 432</h3>
+          <p data-edit="s2.box_1.text" data-edit-type="rich" data-edit-count="1">At the back of the Veterans Memorial Hall, 1000 Main Street, Cambria.</p>
+          <a class="btn btn--light btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=1000+Main+St+Cambria+CA+93428" rel="noopener" data-edit="s2.box_1.button">Get directions</a>
         </div>
         <div class="notice notice--gold">
-          <p><strong>Who's welcome?</strong> Pancake breakfasts and Bingo are open to everyone. Club nights and dinners are for members and their guests — come as a guest of a member, or <a href="join.html">join us</a>.</p>
+          <p data-edit="s2.box_2.text" data-edit-type="rich" data-edit-count="1"><strong>Who's welcome?</strong> Pancake breakfasts and Bingo are open to everyone. Club nights and dinners are for members and their guests — come as a guest of a member, or <a href="join.html">join us</a>.</p>
         </div>
       </aside>
     </div>
@@ -172,21 +185,21 @@
 
   <section class="section section--white" data-hide-if-empty>
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">Special events</p><h2>Save the date</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow" data-edit="s3.small_label">Special events</p><h2 data-edit="s3.heading">Save the date</h2></div></div>
       <div data-render="featured" data-limit="6"></div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">Every week &amp; every month</p><h2>Our regular schedule</h2><p class="muted">The "Next" dates update by themselves.</p></div></div>
+      <div class="section-head"><div><p class="eyebrow" data-edit="s4.small_label">Every week &amp; every month</p><h2 data-edit="s4.heading">Our regular schedule</h2><p class="muted" data-edit="s4.text" data-edit-type="rich" data-edit-count="1">The "Next" dates update by themselves.</p></div></div>
       <div data-render="week"></div>
     </div>
   </section>
 
   <section class="section section--white" id="calendar">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">Full calendar</p><h2>Post, Auxiliary &amp; Club calendar</h2><p class="muted">Kept up to date by the Post and Auxiliary in Google Calendar. On a phone, it shows as a list.</p></div></div>
+      <div class="section-head"><div><p class="eyebrow" data-edit="s5.small_label">Full calendar</p><h2 data-edit="s5.heading">Post, Auxiliary &amp; Club calendar</h2><p class="muted" data-edit="s5.text" data-edit-type="rich" data-edit-count="1">Kept up to date by the Post and Auxiliary in Google Calendar. On a phone, it shows as a list.</p></div></div>
       <div class="calendar-embed">
         <iframe title="American Legion Post 432 calendar" loading="lazy"
           data-calendar="https://calendar.google.com/calendar/embed?height=700&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;showTitle=0&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=1&amp;src=YTQ3ZGY4OTE1ZWRhOGMwZmU2N2Q0MTZkNDdjMjJhNmM1MjNiYWFjZjJmMWNiMGJmOWUwOTM4MDBiNDBiNzMxMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=YjgyOTkwNjBlZWMwNmI4OWU3YTViNDQ2NTI4YTU3NGZiZDFlN2I0MmZmZGRkZDhjZTgzNTU0MDdkOWNlNWY3OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=YWxjbHViNDMyQGdtYWlsLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%231b3d6d&amp;color=%23d72131&amp;color=%23c9a13b&amp;color=%230B8043"
@@ -238,6 +251,7 @@
         <li><a href="post-everlasting.html">Post Everlasting</a></li>
         <li><a href="sal.html">Sons of The American Legion</a></li>
         <li><a href="auxiliary.html">Auxiliary</a></li>
+        <li><a href="news.html">News &amp; Photos</a></li>
         <li><a href="bugle.html">The Bugle</a></li>
         <li><a href="resources.html">Veteran Resources</a></li>
       </ul>
@@ -246,7 +260,7 @@
   <div class="footer-bottom">
     <div class="wrap">
       <p>© <span data-year>2026</span> American Legion Post 432, Cambria, California · Tax ID 95-6196709</p>
-      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/">Website editor login</a></p>
+      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/" data-edit-page>Edit this page</a></p>
     </div>
   </div>
 </footer>

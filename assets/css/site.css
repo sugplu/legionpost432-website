@@ -226,6 +226,21 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 @media (max-width: 420px) { .brand img { width: 2.7rem; } .brand__name { font-size: 1.3rem; } .brand__place { font-size: .8rem; } .menu-button { padding-inline: .75rem; } }
 
 /* ---------- Announcement ---------- */
+/* Words and photos from the website editor: hidden for a moment while they load (applyPageEdits in site.js) */
+.edits-pending [data-edit], .edits-pending [data-edit-part], .edits-pending [data-edit-img], .edits-pending [data-edit-list] { visibility: hidden; }
+[data-edit][hidden], [data-edit-part][hidden], [data-edit-list][hidden], figure[hidden] { display: none !important; }
+
+/* News & photos */
+.news-list { max-width: 52rem; margin-inline: auto; }
+.story { padding-block: 2.75rem; border-top: 1px solid var(--line-2); scroll-margin-top: 6rem; }
+.story:first-child { border-top: 0; padding-top: 0; }
+.story__date { margin: 0 0 .4rem; font: 700 .85rem/1.2 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--red-600); }
+.story h2 { margin: 0 0 1.25rem; }
+.story__photo { margin: 0 0 1.5rem; border-radius: var(--radius); overflow: hidden; background: var(--navy-100); }
+.story__photo img { display: block; width: 100%; height: auto; max-height: 36rem; object-fit: cover; }
+.story__text { max-width: none; }
+.story__gallery { margin-top: 1.75rem; }
+
 /* Preview strip: shown only on the github.io test address (initPreview in site.js) */
 .preview-bar { background: var(--red-700); color: #fff; font-size: .92rem; }
 .preview-bar .wrap { padding-block: .5rem; text-align: center; }

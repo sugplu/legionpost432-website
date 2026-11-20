@@ -1,0 +1,52 @@
+{
+  "s1": {
+    "photo": "/media/images/flag-memorial-night.jpg",
+    "photo_alt": "",
+    "small_label": "Contact & Visit",
+    "title": "We'd love to hear from you",
+    "intro": "<p>Questions about joining, Troop Support, memorial bricks, the Picnic or anything else — call, write or stop by.</p>"
+  },
+  "s2": {
+    "box_1": {
+      "heading": "Call"
+    },
+    "box_2": {
+      "heading": "Email"
+    },
+    "box_3": {
+      "heading": "Mail",
+      "text": "<p>American Legion Post 432<br>P.O. Box 697<br>Cambria, CA 93428-0697</p>"
+    },
+    "box_4": {
+      "heading": "Visit",
+      "text": "<p>Veterans Memorial Hall<br>1000 Main Street, Cambria</p>",
+      "text_2": "<p>The Legion Dining Room and Club 432 are at the back of the Hall.</p>"
+    }
+  },
+  "s3": {
+    "heading": "Send us a message",
+    "button": "Open in Google Maps"
+  },
+  "s4": {
+    "small_label": "Good to know",
+    "heading": "Frequently asked",
+    "questions": [
+      {
+        "question": "Can I rent the Veterans Memorial Hall?",
+        "answer": "<p>The Veterans Memorial Hall is owned and managed by the <strong>Cambria Community Services District (CCSD)</strong>, so rentals are booked through them, not through the Legion. See the <a href=\"https://cambriacsd.specialdistrict.org/veterans-memorial-building\">CCSD Veterans Memorial Hall page</a> for rooms, rates and the <a href=\"https://cambriacsd.specialdistrict.org/cambria-veterans-memorial-hall-reservations\">reservation form</a>.</p>"
+      },
+      {
+        "question": "Is Club 432 open to the public?",
+        "answer": "<p>Club 432 is for Legion Family members and their guests. Our monthly pancake breakfast (third Saturday, 8–11 AM) and Auxiliary Bingo (second Wednesday) welcome everyone — a great way to meet us.</p>"
+      },
+      {
+        "question": "When and where are meetings?",
+        "answer": "<p>General meetings are the first Wednesday of each month at 6:00 PM in the Legion Dining Room, with dinner at 5:00 PM. Meetings are open to the public.</p>"
+      },
+      {
+        "question": "How do I let you know a member has passed away?",
+        "answer": "<p>We're sorry for your loss. Please call (805) 927-5010 or use the form above and choose “Reporting a member's passing.” We'll make sure your loved one is honored in our <a href=\"post-everlasting.html\">Post Everlasting</a>.</p>"
+      }
+    ]
+  }
+}

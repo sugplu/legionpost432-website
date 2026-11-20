@@ -1,0 +1,41 @@
+{
+  "s1": {
+    "photo": "/media/images/sal-bbq-pit.jpg",
+    "photo_alt": "",
+    "small_label": "Sons of The American Legion · Squadron 432",
+    "title": "Carrying a family legacy forward",
+    "intro": "<p>Sons, grandsons and other male descendants of veterans, honoring their families' service by serving Cambria.</p>"
+  },
+  "s2": {
+    "small_label": "Who we are",
+    "heading": "Part of the Legion Family since 1932",
+    "text": "<p>The Sons of The American Legion (S.A.L.) was created in 1932 as an organization within The American Legion. Together with the Legion and the American Legion Auxiliary, the Sons make up the Legion Family — united in caring for veterans and their families, supporting young people, and teaching the fundamentals of good citizenship.</p><p>Each squadron shapes its own programs to serve its community. Here in Cambria, that means rolling up our sleeves.</p>",
+    "photo": "/media/images/sal-grill.jpg",
+    "photo_alt": "A Squadron member grills rolls on the big outdoor barbecue."
+  },
+  "s3": {
+    "small_label": "What Squadron 432 does",
+    "heading": "Quiet, selfless service",
+    "text": "<ul><li><strong>Community barbecues</strong> that raise money for local people and organizations in need</li><li><strong>Hanging the American flags on Main Street</strong> for patriotic holidays — and taking them down again</li><li><strong>Free community barbecues</strong> on special occasions, such as after the 9/11 memorial</li><li><strong>Supporting youth sports</strong> teams and leagues</li><li><strong>Sponsoring a local blood drive</strong></li><li><strong>Ongoing support of Post 432</strong>, from the Picnic in the Park to everyday work at the Hall</li></ul>",
+    "photo": "/media/images/sal-award-2008.jpg",
+    "photo_alt": "Squadron 432 members gather with the Distinguished Service Award in 2008.",
+    "caption": "2008: Squadron 432 receives the Distinguished Service Award"
+  },
+  "s4": {
+    "box_1": {
+      "heading": "Distinguished Service Award",
+      "text": "<p>In September 2008, following the 9/11 memorial and S.A.L.-sponsored community barbecue, state Detachment leaders presented Squadron 432 with the Distinguished Service Award — the highest honor a squadron can receive — in recognition of how quietly and selflessly it serves Cambria's citizens and young people. The informal ceremony took place, fittingly, at the Vets Hall barbecue pit.</p>"
+    }
+  },
+  "s5": {
+    "small_label": "Membership",
+    "heading": "Who can join",
+    "text": "<p>You qualify if you are a male descendant — including a son, stepson or adopted son — of:</p><ul><li>a member of The American Legion;</li><li>a veteran who served during an eligible period and died while serving; or</li><li>a veteran who served during an eligible period and was later honorably discharged.</li></ul><p>Dues are <strong>$30 a year</strong>. Mail your application with a check payable to <strong>“SAL Squadron 432”</strong> to P.O. Box 697, Cambria, CA 93428-0697.</p>",
+    "text_2": "<p>Many men belong to both the Legion and the Sons. Sons who later serve in the military become eligible for the Legion too — they're known as “dual members.”</p>",
+    "button": "SAL application (PDF)",
+    "box_1": {
+      "small_label": "Squadron officers",
+      "text": "<p>Questions? Call the Post at <a href=\"tel:+18059275010\">(805) 927-5010</a>.</p>"
+    }
+  }
+}

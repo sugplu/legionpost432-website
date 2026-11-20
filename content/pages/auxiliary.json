@@ -1,0 +1,88 @@
+{
+  "s1": {
+    "photo": "/media/images/auxiliary-volunteers.jpg",
+    "photo_alt": "",
+    "small_label": "American Legion Auxiliary · Unit 432",
+    "title": "Service, Not Self",
+    "intro": "<p>Supporting The American Legion and honoring those who have served, by strengthening the lives of veterans, military members and their families — at home and abroad.</p>"
+  },
+  "s2": {
+    "small_label": "Our mission",
+    "heading": "For God and Country",
+    "text": "<p>We advocate for veterans, educate our community, mentor young people, and promote patriotism, good citizenship, peace and security. Through service, fellowship and compassion, we try to make a real difference for the people who have given so much for our freedom.</p><p>As one of the nation's largest patriotic service organizations, the American Legion Auxiliary has shown for more than a century what volunteers can do. Here in Cambria, Unit 432 does it one dinner, one Bingo card and one helping hand at a time.</p>",
+    "photo": "/media/images/auxiliary-parade-team.jpg",
+    "photo_alt": "Unit 432 members in red, wearing Statue of Liberty crowns, stand beside their flag-decorated parade car.",
+    "caption": "Unit 432 on parade"
+  },
+  "s3": {
+    "small_label": "In Cambria",
+    "heading": "What Unit 432 does",
+    "button": "See the calendar",
+    "box_1": {
+      "photo": "/media/images/club-kitchen.jpg",
+      "photo_alt": "Volunteers in the Legion kitchen.",
+      "small_label": "Every Thursday · 5 PM",
+      "heading": "Thursday night dinners",
+      "text": "<p>A home-cooked meal with a new menu every week, $12. Tickets go on sale at 5 PM — first come, first served.</p>"
+    },
+    "box_2": {
+      "photo": "/media/images/auxiliary-bingo-car.jpg",
+      "photo_alt": "The Auxiliary's flag-covered car advertising monthly Bingo.",
+      "small_label": "2nd Wednesday monthly",
+      "heading": "Bingo night",
+      "text": "<p>Doors open at 5 PM and games start at 6 PM. Everyone is welcome.</p>"
+    },
+    "box_3": {
+      "photo": "/media/images/poppies.jpg",
+      "photo_alt": "A jar of donations surrounded by red memorial poppies.",
+      "small_label": "Around Memorial Day",
+      "heading": "Poppy program",
+      "text": "<p>Our oldest tradition: red poppies in remembrance of those who served, with donations supporting veterans and their families.</p>"
+    }
+  },
+  "s4": {
+    "small_label": "National programs",
+    "heading": "How the Auxiliary serves",
+    "questions": [
+      {
+        "question": "Veterans Affairs & Rehabilitation",
+        "answer": "<p>Assistance, advocacy and volunteer service for veterans and their families — from visiting hospitalized veterans to connecting families with resources — so those who served are never forgotten.</p>"
+      },
+      {
+        "question": "Children & Youth",
+        "answer": "<p>Programs that support the physical, emotional, educational and spiritual needs of young people, and help create safe, supportive places for children to thrive.</p>"
+      },
+      {
+        "question": "Girls State & Girls Nation",
+        "answer": "<p>Premier leadership and civics programs where young women experience government in action. Since 1937, Girls State has introduced generations of young women to responsible citizenship.</p>"
+      },
+      {
+        "question": "Education",
+        "answer": "<p>Supporting quality education and encouraging students to pursue their goals beyond high school, working with local schools and educators.</p>"
+      },
+      {
+        "question": "Community Service",
+        "answer": "<p>Volunteer projects and partnerships that respond to local needs and make our community stronger, more caring and more connected.</p>"
+      },
+      {
+        "question": "Auxiliary Emergency Fund",
+        "answer": "<p>“Women helping women”: temporary financial help for eligible Auxiliary members facing an emergency.</p>"
+      },
+      {
+        "question": "Legislative & National Security",
+        "answer": "<p>Helping members stay informed about issues affecting veterans, military families and our nation's security, and speak up to their elected representatives.</p>"
+      }
+    ]
+  },
+  "s5": {
+    "small_label": "Leadership",
+    "heading": "Unit 432 officers",
+    "box_1": {
+      "small_label": "Join us",
+      "heading": "Become a member",
+      "text": "<p>Membership is open to family members of veterans eligible for The American Legion. Not sure if you qualify? Just ask.</p>",
+      "button": "Application (PDF)",
+      "button_2": "Ask a question"
+    }
+  }
+}

@@ -57,6 +57,55 @@ content:
         label: Contact form service address (leave blank unless your web helper set one up)
         type: string
 
+  - name: news
+    label: "News & photos"
+    type: file
+    path: content/news.json
+    format: json
+    fields:
+      - name: stories
+        label: Stories
+        description: "The newest story shows first on the website. To add a story, use the add button at the bottom of this list."
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.date} · {fields.title}"
+        fields:
+          - name: title
+            label: Headline
+            type: string
+            required: true
+          - name: date
+            label: Date
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: photo
+            label: Main photo
+            type: image
+            options:
+              media: images
+          - name: photo_alt
+            label: "Describe the main photo in a few words"
+            type: string
+          - name: story
+            label: The story
+            type: rich-text
+            options:
+              format: html
+              switcher: false
+              media: false
+          - name: more_photos
+            label: "More photos (optional)"
+            description: "Add as many as you like. They show under the story."
+            type: image
+            options:
+              media: images
+              multiple:
+                max: 40
+
   - name: events
     label: "Events"
     type: file
@@ -171,6 +220,42 @@ content:
             type: string
             hidden: true
 
+  - name: bugle
+    label: "The Bugle newsletters"
+    type: file
+    path: content/bugle.json
+    format: json
+    fields:
+      - name: issues
+        label: Issues (newest is shown first automatically)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title}"
+        fields:
+          - name: title
+            label: Issue name
+            type: string
+            required: true
+            description: "Example: January 2027"
+          - name: date
+            label: Issue date
+            type: date
+            options:
+              format: yyyy-MM-dd
+          - name: file
+            label: The newsletter PDF
+            type: file
+            options:
+              media: bugle
+          - name: note
+            label: What's inside (optional)
+            type: text
+          - name: sample
+            label: Placeholder (turn OFF for real issues)
+            type: boolean
+
   - name: officers
     label: "Officers"
     type: file
@@ -206,44 +291,8 @@ content:
           - { name: title, label: Office, type: string }
           - { name: name, label: Name (leave blank if open), type: string }
 
-  - name: bugle
-    label: "The Bugle newsletter"
-    type: file
-    path: content/bugle.json
-    format: json
-    fields:
-      - name: issues
-        label: Issues (newest is shown first automatically)
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{fields.title}"
-        fields:
-          - name: title
-            label: Issue name
-            type: string
-            required: true
-            description: "Example: January 2027"
-          - name: date
-            label: Issue date
-            type: date
-            options:
-              format: yyyy-MM-dd
-          - name: file
-            label: The newsletter PDF
-            type: file
-            options:
-              media: bugle
-          - name: note
-            label: What's inside (optional)
-            type: text
-          - name: sample
-            label: Placeholder (turn OFF for real issues)
-            type: boolean
-
   - name: everlasting
-    label: "Post Everlasting"
+    label: "Post Everlasting names"
     type: file
     path: content/post-everlasting.json
     format: json
@@ -300,3 +349,2495 @@ content:
           - name: url
             label: Website (optional)
             type: string
+
+  - name: pages
+    label: "Website pages (words and photos)"
+    type: group
+    items:
+      - name: page-index
+        label: "Home page"
+        type: file
+        path: content/pages/index.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: button
+                label: "Button words"
+                type: string
+              - name: button_2
+                label: "Button words 2"
+                type: string
+              - name: photo_credit
+                label: "Photo credit"
+                type: string
+          - name: s2
+            label: "Quick information"
+            type: object
+            fields:
+              - name: box_1
+                label: "Box: Next General Meeting"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: small_print
+                    label: "Small print"
+                    type: string
+              - name: box_2
+                label: "Box: Pancake Breakfast"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: small_print
+                    label: "Small print"
+                    type: string
+              - name: box_3
+                label: "Box: Club 432"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: main_line
+                    label: "Main line"
+                    type: string
+                  - name: small_print
+                    label: "Small print"
+                    type: string
+              - name: box_4
+                label: "Box: Find Us"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: main_line
+                    label: "Main line"
+                    type: string
+                  - name: small_print
+                    label: "Small print"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s3
+            label: "A close-knit family, serving a close-knit town"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: photo_2
+                label: "Photo 2"
+                type: image
+                options:
+                  media: images
+              - name: photo_2_alt
+                label: "Describe the photo 2 in a few words"
+                type: string
+          - name: s4
+            label: "A regular week at the Post"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: button
+                label: "Button words"
+                type: string
+          - name: s5
+            label: "Coming up"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+          - name: s6
+            label: "Serving those who served — and the town we love"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: box_1
+                label: "Box: Troop Support Services (TS2)"
+                type: object
+                fields:
+                  - name: photo
+                    label: "Photo"
+                    type: image
+                    options:
+                      media: images
+                  - name: photo_alt
+                    label: "Describe the photo in a few words"
+                    type: string
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_2
+                label: "Box: Picnic in the Park"
+                type: object
+                fields:
+                  - name: photo
+                    label: "Photo"
+                    type: image
+                    options:
+                      media: images
+                  - name: photo_alt
+                    label: "Describe the photo in a few words"
+                    type: string
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_3
+                label: "Box: Cambria Veterans Memorial"
+                type: object
+                fields:
+                  - name: photo
+                    label: "Photo"
+                    type: image
+                    options:
+                      media: images
+                  - name: photo_alt
+                    label: "Describe the photo in a few words"
+                    type: string
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_4
+                label: "Box: Scholarships & Boys State"
+                type: object
+                fields:
+                  - name: photo
+                    label: "Photo"
+                    type: image
+                    options:
+                      media: images
+                  - name: photo_alt
+                    label: "Describe the photo in a few words"
+                    type: string
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_5
+                label: "Box: Memorial Day & Veterans Day"
+                type: object
+                fields:
+                  - name: photo
+                    label: "Photo"
+                    type: image
+                    options:
+                      media: images
+                  - name: photo_alt
+                    label: "Describe the photo in a few words"
+                    type: string
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_6
+                label: "Box: Club 432 & Community Meals"
+                type: object
+                fields:
+                  - name: photo
+                    label: "Photo"
+                    type: image
+                    options:
+                      media: images
+                  - name: photo_alt
+                    label: "Describe the photo in a few words"
+                    type: string
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+          - name: s7
+            label: "There's a place here for the whole family"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: box_1
+                label: "Box: The American Legion · Post 432"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_2
+                label: "Box: Sons of The American Legion · Squadron 432"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_3
+                label: "Box: American Legion Auxiliary · Unit 432"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+          - name: s8
+            label: "Served at least one day of active duty since 1941?"
+            type: object
+            fields:
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: button
+                label: "Button words"
+                type: string
+          - name: s9
+            label: "News from the Post"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+          - name: s10
+            label: "Help us help local veterans"
+            type: object
+            fields:
+              - name: box_1
+                label: "Box: Help us help local veterans"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label above the heading"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: text_2
+                    label: "Text 2"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: button
+                    label: "Button words"
+                    type: string
+          - name: s11
+            label: "With gratitude"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: button
+                label: "Button words"
+                type: string
+      - name: page-about
+        label: "About"
+        type: file
+        path: content/pages/about.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "Mutual helpfulness, service and fellowship"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: caption
+                label: "Photo caption"
+                type: string
+          - name: s3
+            label: "Programs & services"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: text_2
+                label: "Text 2"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: text_3
+                label: "Text 3"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s4
+            label: "Investing in the next generation"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: button
+                label: "Button words"
+                type: string
+          - name: s5
+            label: "Pull up a chair"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: row_1_name
+                label: "Row 1: name"
+                type: string
+              - name: row_1_details
+                label: "Row 1: details"
+                type: string
+              - name: row_2_name
+                label: "Row 2: name"
+                type: string
+              - name: row_2_details
+                label: "Row 2: details"
+                type: string
+              - name: row_3_name
+                label: "Row 3: name"
+                type: string
+              - name: row_3_details
+                label: "Row 3: details"
+                type: string
+              - name: row_4_name
+                label: "Row 4: name"
+                type: string
+              - name: row_4_details
+                label: "Row 4: details"
+                type: string
+              - name: row_5_name
+                label: "Row 5: name"
+                type: string
+              - name: row_5_details
+                label: "Row 5: details"
+                type: string
+              - name: text_2
+                label: "Text 2"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: caption
+                label: "Photo caption"
+                type: string
+          - name: s6
+            label: "Post 432 officers"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: heading_2
+                label: "Heading 2"
+                type: string
+          - name: s7
+            label: "Milestones"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: milestones
+                label: "Milestones"
+                description: "To add a milestone, use the add button at the bottom of this list."
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.year}: {fields.text}"
+                fields:
+                  - name: year
+                    label: Year
+                    type: string
+                    required: true
+                  - name: text
+                    label: What happened
+                    type: text
+                    required: true
+              - name: small_label_2
+                label: "Small label above the heading 2"
+                type: string
+              - name: heading_2
+                label: "Heading 2"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s8
+            label: "Ways to give"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: box_1
+                label: "Box: General donations"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_2
+                label: "Box: Troop Support (TS2)"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_3
+                label: "Box: Engraved memorial brick"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+      - name: page-join
+        label: "Join"
+        type: file
+        path: content/pages/join.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "Boxes: I served in the military, My father or grandfather served, Someone in my family served"
+            type: object
+            fields:
+              - name: box_1
+                label: "Box: I served in the military"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_2
+                label: "Box: My father or grandfather served"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+              - name: box_3
+                label: "Box: Someone in my family served"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: text
+          - name: s3
+            label: "Who can join"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: text_2
+                label: "Text 2"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: heading_2
+                label: "Heading 2"
+                type: string
+              - name: text_3
+                label: "Text 3"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: box_1
+                label: "Box: Box 1"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label above the heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: button
+                    label: "Button words"
+                    type: string
+                  - name: text_2
+                    label: "Text 2"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s4
+            label: "Honor your family's service"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: box_1
+                label: "Box: Box 1"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: button
+                    label: "Button words"
+                    type: string
+          - name: s5
+            label: "“Service, Not Self”"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: box_1
+                label: "Box: Box 1"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: button
+                    label: "Button words"
+                    type: string
+          - name: s6
+            label: "Common questions"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: questions
+                label: "Questions and answers"
+                description: "Click a question to open it. To add one, use the add button at the bottom of this list. Drag to change the order."
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.question}"
+                fields:
+                  - name: question
+                    label: Question
+                    type: string
+                    required: true
+                  - name: answer
+                    label: Answer
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+      - name: page-events
+        label: "Events & Calendar"
+        type: file
+        path: content/pages/events.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "Coming up"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: box_1
+                label: "Box: Legion Dining Room & Club 432"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label above the heading"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: button
+                    label: "Button words"
+                    type: string
+              - name: box_2
+                label: "Box: Box 2"
+                type: object
+                fields:
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s3
+            label: "Save the date"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+          - name: s4
+            label: "Our regular schedule"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s5
+            label: "Post, Auxiliary & Club calendar"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+      - name: page-picnic
+        label: "Fourth of July Picnic"
+        type: file
+        path: content/pages/picnic.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "The 45th annual Picnic — on America's 250th birthday"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: box_1
+                label: "Box: Box 1"
+                type: object
+                fields:
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: caption
+                label: "Photo caption"
+                type: string
+          - name: s3
+            label: "A day at the Picnic"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: row_1_name
+                label: "Row 1: name"
+                type: string
+              - name: row_1_details
+                label: "Row 1: details"
+                type: string
+              - name: row_2_name
+                label: "Row 2: name"
+                type: string
+              - name: row_2_details
+                label: "Row 2: details"
+                type: string
+              - name: row_3_name
+                label: "Row 3: name"
+                type: string
+              - name: row_3_details
+                label: "Row 3: details"
+                type: string
+              - name: row_4_name
+                label: "Row 4: name"
+                type: string
+              - name: row_4_details
+                label: "Row 4: details"
+                type: string
+              - name: row_5_name
+                label: "Row 5: name"
+                type: string
+              - name: row_5_details
+                label: "Row 5: details"
+                type: string
+              - name: text_2
+                label: "Text 2"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: small_label_2
+                label: "Small label above the heading 2"
+                type: string
+              - name: heading_2
+                label: "Heading 2"
+                type: string
+              - name: text_3
+                label: "Text 3"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: button
+                label: "Button words"
+                type: string
+              - name: box_1
+                label: "Box: Box 1"
+                type: object
+                fields:
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s4
+            label: "Picnic do's and don'ts"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: box_1
+                label: "Box: Do"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_2
+                label: "Box: Don't"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s5
+            label: "Scenes from the Picnic"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: photos
+                label: "Photos"
+                description: "To add a photo, use the add button at the bottom of this list. Drag to change the order."
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.description}"
+                fields:
+                  - name: photo
+                    label: Photo
+                    type: image
+                    required: true
+                    options:
+                      media: images
+                  - name: description
+                    label: "Describe the photo in a few words"
+                    type: string
+          - name: s6
+            label: "Help keep the tradition going"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: box_1
+                label: "Box: Box 1"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_2
+                label: "Box: Box 2"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_3
+                label: "Box: Box 3"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_4
+                label: "Box: Box 4"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_5
+                label: "Box: Box 5"
+                type: object
+                fields:
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s7
+            label: "With gratitude"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+          - name: s8
+            label: "Many hands make light work"
+            type: object
+            fields:
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: button
+                label: "Button words"
+                type: string
+      - name: page-ts2
+        label: "Troop Support (TS2)"
+        type: file
+        path: content/pages/ts2.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "A bridge between our town and the people serving it"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: caption
+                label: "Photo caption"
+                type: string
+          - name: s3
+            label: "What TS2 has done"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: box_1
+                label: "Box: invested in local military families"
+                type: object
+                fields:
+                  - name: number
+                    label: "Number"
+                    type: string
+                  - name: number_means
+                    label: "What the number means"
+                    type: string
+              - name: box_2
+                label: "Box: holiday boxes shipped overseas"
+                type: object
+                fields:
+                  - name: number
+                    label: "Number"
+                    type: string
+                  - name: number_means
+                    label: "What the number means"
+                    type: string
+              - name: box_3
+                label: "Box: service members honored on the Main Street board"
+                type: object
+                fields:
+                  - name: number
+                    label: "Number"
+                    type: string
+                  - name: number_means
+                    label: "What the number means"
+                    type: string
+              - name: box_4
+                label: "Box: welcome-home banners over the Vets Hall"
+                type: object
+                fields:
+                  - name: number
+                    label: "Number"
+                    type: string
+                  - name: number_means
+                    label: "What the number means"
+                    type: string
+          - name: s4
+            label: "For service members"
+            type: object
+            fields:
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: heading_2
+                label: "Heading 2"
+                type: string
+              - name: text_2
+                label: "Text 2"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s5
+            label: "Boxes: Tell us about them, Give to TS2"
+            type: object
+            fields:
+              - name: box_1
+                label: "Box: Tell us about them"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label above the heading"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: button
+                    label: "Button words"
+                    type: string
+              - name: box_2
+                label: "Box: Give to TS2"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: text_2
+                    label: "Text 2"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+      - name: page-memorial
+        label: "Veterans Memorial"
+        type: file
+        path: content/pages/memorial.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "Dedicated Memorial Day, 2011"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: photo_2
+                label: "Photo 2"
+                type: image
+                options:
+                  media: images
+              - name: photo_2_alt
+                label: "Describe the photo 2 in a few words"
+                type: string
+          - name: s3
+            label: "Secure your place in Cambria's history"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: text_2
+                label: "Text 2"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: text_3
+                label: "Text 3"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+      - name: page-post-everlasting
+        label: "Post Everlasting"
+        type: file
+        path: content/pages/post-everlasting.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "What “Post Everlasting” means"
+            type: object
+            fields:
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: box_1
+                label: "Box: Our annual remembrance"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: text_2
+                    label: "Text 2"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s3
+            label: "Our departed comrades"
+            type: object
+            fields:
+              - name: heading
+                label: "Heading"
+                type: string
+      - name: page-sal
+        label: "Sons of The American Legion"
+        type: file
+        path: content/pages/sal.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "Part of the Legion Family since 1932"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+          - name: s3
+            label: "Quiet, selfless service"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: caption
+                label: "Photo caption"
+                type: string
+          - name: s4
+            label: "Distinguished Service Award"
+            type: object
+            fields:
+              - name: box_1
+                label: "Box: Distinguished Service Award"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s5
+            label: "Who can join"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: text_2
+                label: "Text 2"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: button
+                label: "Button words"
+                type: string
+              - name: box_1
+                label: "Box: Box 1"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+      - name: page-auxiliary
+        label: "Auxiliary"
+        type: file
+        path: content/pages/auxiliary.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "For God and Country"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: caption
+                label: "Photo caption"
+                type: string
+          - name: s3
+            label: "What Unit 432 does"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: button
+                label: "Button words"
+                type: string
+              - name: box_1
+                label: "Box: Thursday night dinners"
+                type: object
+                fields:
+                  - name: photo
+                    label: "Photo"
+                    type: image
+                    options:
+                      media: images
+                  - name: photo_alt
+                    label: "Describe the photo in a few words"
+                    type: string
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_2
+                label: "Box: Bingo night"
+                type: object
+                fields:
+                  - name: photo
+                    label: "Photo"
+                    type: image
+                    options:
+                      media: images
+                  - name: photo_alt
+                    label: "Describe the photo in a few words"
+                    type: string
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_3
+                label: "Box: Poppy program"
+                type: object
+                fields:
+                  - name: photo
+                    label: "Photo"
+                    type: image
+                    options:
+                      media: images
+                  - name: photo_alt
+                    label: "Describe the photo in a few words"
+                    type: string
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s4
+            label: "How the Auxiliary serves"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: questions
+                label: "Questions and answers"
+                description: "Click a question to open it. To add one, use the add button at the bottom of this list. Drag to change the order."
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.question}"
+                fields:
+                  - name: question
+                    label: Question
+                    type: string
+                    required: true
+                  - name: answer
+                    label: Answer
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s5
+            label: "Unit 432 officers"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: box_1
+                label: "Box: Become a member"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label above the heading"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: button
+                    label: "Button words"
+                    type: string
+                  - name: button_2
+                    label: "Button words 2"
+                    type: string
+      - name: page-news
+        label: "News & Photos"
+        type: file
+        path: content/pages/news.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+      - name: page-bugle
+        label: "The Bugle"
+        type: file
+        path: content/pages/bugle.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s3
+            label: "Past issues"
+            type: object
+            fields:
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: box_1
+                label: "Box: Get The Bugle"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: button
+                    label: "Button words"
+                    type: string
+      - name: page-resources
+        label: "Veteran Resources"
+        type: file
+        path: content/pages/resources.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "Veterans Crisis Line — free, confidential, 24/7"
+            type: object
+            fields:
+              - name: box_1
+                label: "Box: Box 1"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: button
+                    label: "Button words"
+                    type: string
+                  - name: button_2
+                    label: "Button words 2"
+                    type: string
+          - name: s3
+            label: "Start here"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: box_1
+                label: "Box: San Luis Obispo County Veterans Services"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: text_2
+                    label: "Text 2"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_2
+                label: "Box: San Luis Obispo Vet Center"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_3
+                label: "Box: Post 432 Service Officer"
+                type: object
+                fields:
+                  - name: small_label
+                    label: "Small label"
+                    type: string
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s4
+            label: "Benefits & health care"
+            type: object
+            fields:
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: heading_2
+                label: "Heading 2"
+                type: string
+              - name: text_2
+                label: "Text 2"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: heading_3
+                label: "Heading 3"
+                type: string
+              - name: text_3
+                label: "Text 3"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s5
+            label: "Your elected officials"
+            type: object
+            fields:
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: text
+                label: "Text"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: heading_2
+                label: "Heading 2"
+                type: string
+              - name: text_2
+                label: "Text 2"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+              - name: heading_3
+                label: "Heading 3"
+                type: string
+              - name: text_3
+                label: "Text 3"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+      - name: page-contact
+        label: "Contact"
+        type: file
+        path: content/pages/contact.json
+        format: json
+        fields:
+          - name: s1
+            label: "Top of the page"
+            type: object
+            fields:
+              - name: photo
+                label: "Photo"
+                type: image
+                options:
+                  media: images
+              - name: photo_alt
+                label: "Describe the photo in a few words"
+                type: string
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: title
+                label: "Page title"
+                type: string
+              - name: intro
+                label: "Introduction"
+                type: rich-text
+                options:
+                  format: html
+                  switcher: false
+                  media: false
+          - name: s2
+            label: "Boxes: Call, Email, Mail, Visit"
+            type: object
+            fields:
+              - name: box_1
+                label: "Box: Call"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+              - name: box_2
+                label: "Box: Email"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+              - name: box_3
+                label: "Box: Mail"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+              - name: box_4
+                label: "Box: Visit"
+                type: object
+                fields:
+                  - name: heading
+                    label: "Heading"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+                  - name: text_2
+                    label: "Text 2"
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false
+          - name: s3
+            label: "Send us a message"
+            type: object
+            fields:
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: button
+                label: "Button words"
+                type: string
+          - name: s4
+            label: "Frequently asked"
+            type: object
+            fields:
+              - name: small_label
+                label: "Small label above the heading"
+                type: string
+              - name: heading
+                label: "Heading"
+                type: string
+              - name: questions
+                label: "Questions and answers"
+                description: "Click a question to open it. To add one, use the add button at the bottom of this list. Drag to change the order."
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.question}"
+                fields:
+                  - name: question
+                    label: Question
+                    type: string
+                    required: true
+                  - name: answer
+                    label: Answer
+                    type: rich-text
+                    options:
+                      format: html
+                      switcher: false
+                      media: false

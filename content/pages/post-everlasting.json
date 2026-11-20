@@ -1,0 +1,21 @@
+{
+  "s1": {
+    "photo": "/media/images/picnic-salute.jpg",
+    "photo_alt": "",
+    "small_label": "In memoriam",
+    "title": "Post Everlasting",
+    "intro": "<p>Comrades who have gone before us. Their service, and their place in our Legion Family, will never be forgotten.</p>"
+  },
+  "s2": {
+    "heading": "What “Post Everlasting” means",
+    "text": "<p>“Post Everlasting” is The American Legion's tribute to members who have passed away. It stands for the lasting legacy of veterans whose service, sacrifice and dedication to our country and community live on in the hearts of their fellow Legionnaires, their loved ones and the town they served.</p>",
+    "box_1": {
+      "heading": "Our annual remembrance",
+      "text": "<p>Each Memorial Day, Post 432 holds a Post Everlasting ceremony to honor our departed comrades. Everyone is welcome to join us.</p>",
+      "text_2": "<p>To let us know of a member's passing, please <a href=\"contact.html\">contact the Post</a> or call (805) 927-5010. For help with burial benefits and military funeral honors, see <a href=\"resources.html#burial\">Veteran Resources</a>.</p>"
+    }
+  },
+  "s3": {
+    "heading": "Our departed comrades"
+  }
+}

@@ -16,6 +16,7 @@
 <link rel="preload" href="assets/fonts/librecaslontext-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script>document.documentElement.classList.add("edits-pending");setTimeout(function(){document.documentElement.classList.remove("edits-pending")},1500);</script>
 <noscript><style>@media (max-width:1139px){.mobile-menu[hidden]{display:block}.menu-button{display:none}}</style></noscript>
 <meta property="og:site_name" content="American Legion Post 432 · Cambria, California">
 <meta property="og:type" content="website">
@@ -82,7 +83,13 @@
             <li><a href="auxiliary.html">American Legion Auxiliary<span>Unit 432</span></a></li>
           </ul>
         </li>
-        <li><a class="nav__link" href="bugle.html">The Bugle</a></li>
+        <li>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-news">News <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="nav__menu" id="menu-news" hidden>
+            <li><a href="news.html">News &amp; Photos<span>Stories and pictures from the Post</span></a></li>
+            <li><a href="bugle.html">The Bugle<span>Our monthly newsletter</span></a></li>
+          </ul>
+        </li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li class="nav__cta"><a class="btn btn--primary btn--sm" href="join.html">Join Post 432</a></li>
       </ul>
@@ -122,6 +129,12 @@
         <ul>
           <li><a href="sal.html">Sons of The American Legion</a></li>
           <li><a href="auxiliary.html">American Legion Auxiliary</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu__group">
+        <p class="mobile-menu__label">News</p>
+        <ul>
+          <li><a href="news.html">News &amp; Photos</a></li>
           <li><a href="bugle.html">The Bugle newsletter</a></li>
         </ul>
       </div>
@@ -139,12 +152,12 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="page-hero__media"><img src="media/images/flag-memorial-day.jpg" alt="" width="800" height="600"></div>
+    <div class="page-hero__media"><img src="media/images/flag-memorial-day.jpg" alt="" width="800" height="600" data-edit-img="s1.photo"></div>
     <div class="wrap">
       <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Programs</li><li>Veteran Resources</li></ol>
-      <p class="eyebrow">Veteran Resources</p>
-      <h1>Help is closer than you think</h1>
-      <p class="lead">Benefits, health care, records and support for veterans and their families — and people nearby who can help you find your way through it, free of charge.</p>
+      <p class="eyebrow" data-edit="s1.small_label">Veteran Resources</p>
+      <h1 data-edit="s1.title">Help is closer than you think</h1>
+      <p class="lead" data-edit="s1.intro" data-edit-type="rich" data-edit-count="1">Benefits, health care, records and support for veterans and their families — and people nearby who can help you find your way through it, free of charge.</p>
     </div>
   </section>
 
@@ -152,13 +165,13 @@
     <div class="wrap">
       <div class="crisis">
         <div>
-          <p class="crisis__title">Veterans Crisis Line — free, confidential, 24/7</p>
-          <p>You don't have to be enrolled in VA benefits or health care to call. Family and friends can call too.</p>
+          <p class="crisis__title" data-edit="s2.box_1.heading">Veterans Crisis Line — free, confidential, 24/7</p>
+          <p data-edit="s2.box_1.text" data-edit-type="rich" data-edit-count="1">You don't have to be enrolled in VA benefits or health care to call. Family and friends can call too.</p>
         </div>
         <div class="btn-row">
           <a class="btn btn--primary" href="tel:988">Dial 988, then press 1</a>
-          <a class="btn btn--outline" href="sms:838255">Text 838255</a>
-          <a class="btn btn--outline" href="https://www.veteranscrisisline.net/" rel="noopener">Chat online</a>
+          <a class="btn btn--outline" href="sms:838255" data-edit="s2.box_1.button">Text 838255</a>
+          <a class="btn btn--outline" href="https://www.veteranscrisisline.net/" rel="noopener" data-edit="s2.box_1.button_2">Chat online</a>
         </div>
       </div>
     </div>
@@ -166,25 +179,25 @@
 
   <section class="section" id="local">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">Local help</p><h2>Start here</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow" data-edit="s3.small_label">Local help</p><h2 data-edit="s3.heading">Start here</h2></div></div>
       <div class="grid grid--3">
         <div class="card card--plain"><div class="card__body">
-          <span class="card__kicker">Free claims help</span>
-          <h3>San Luis Obispo County Veterans Services</h3>
-          <p>Accredited officers help veterans and families apply for VA and state benefits at no cost. By appointment.</p>
-          <p class="small">801 Grand Avenue, San Luis Obispo<br><a href="tel:+18057815766">(805) 781-5766</a></p>
+          <span class="card__kicker" data-edit="s3.box_1.small_label">Free claims help</span>
+          <h3 data-edit="s3.box_1.heading">San Luis Obispo County Veterans Services</h3>
+          <p data-edit="s3.box_1.text" data-edit-type="rich" data-edit-count="1">Accredited officers help veterans and families apply for VA and state benefits at no cost. By appointment.</p>
+          <p class="small" data-edit="s3.box_1.text_2" data-edit-type="rich" data-edit-count="1">801 Grand Avenue, San Luis Obispo<br><a href="tel:+18057815766">(805) 781-5766</a></p>
           <a class="card__more" href="https://www.slocounty.ca.gov/departments/veterans-services" rel="noopener">Visit their website →</a>
         </div></div>
         <div class="card card--plain"><div class="card__body">
-          <span class="card__kicker">Counseling</span>
-          <h3>San Luis Obispo Vet Center</h3>
-          <p>Confidential counseling for veterans, service members and their families, from the VA.</p>
+          <span class="card__kicker" data-edit="s3.box_2.small_label">Counseling</span>
+          <h3 data-edit="s3.box_2.heading">San Luis Obispo Vet Center</h3>
+          <p data-edit="s3.box_2.text" data-edit-type="rich" data-edit-count="1">Confidential counseling for veterans, service members and their families, from the VA.</p>
           <a class="card__more" href="https://www.va.gov/san-luis-obispo-vet-center/" rel="noopener">Vet Center details →</a>
         </div></div>
         <div class="card card--plain"><div class="card__body">
-          <span class="card__kicker">Right here in Cambria</span>
-          <h3>Post 432 Service Officer</h3>
-          <p>Not sure where to start? Our Service Officer can point you and your family toward the benefits and help you've earned.</p>
+          <span class="card__kicker" data-edit="s3.box_3.small_label">Right here in Cambria</span>
+          <h3 data-edit="s3.box_3.heading">Post 432 Service Officer</h3>
+          <p data-edit="s3.box_3.text" data-edit-type="rich" data-edit-count="1">Not sure where to start? Our Service Officer can point you and your family toward the benefits and help you've earned.</p>
           <a class="card__more" href="contact.html">Contact the Post →</a>
         </div></div>
       </div>
@@ -194,8 +207,8 @@
   <section class="section section--white">
     <div class="wrap grid grid--3" style="gap:2.5rem">
       <div>
-        <h2 style="font-size:1.6rem">Benefits &amp; health care</h2>
-        <ul class="star-list">
+        <h2 style="font-size:1.6rem" data-edit="s4.heading">Benefits &amp; health care</h2>
+        <ul class="star-list" data-edit="s4.text" data-edit-type="rich" data-edit-count="1">
           <li><a href="https://www.va.gov/" rel="noopener">VA.gov</a> — apply for and manage VA benefits</li>
           <li><a href="https://www.va.gov/health-care/" rel="noopener">VA health care</a></li>
           <li><a href="https://www.va.gov/education/" rel="noopener">GI Bill &amp; education benefits</a></li>
@@ -205,8 +218,8 @@
         </ul>
       </div>
       <div id="burial">
-        <h2 style="font-size:1.6rem">Records, burial &amp; memorials</h2>
-        <ul class="star-list">
+        <h2 style="font-size:1.6rem" data-edit="s4.heading_2">Records, burial &amp; memorials</h2>
+        <ul class="star-list" data-edit="s4.text_2" data-edit-type="rich" data-edit-count="1">
           <li><a href="https://www.archives.gov/veterans/military-service-records" rel="noopener">Request your DD-214 &amp; military records</a></li>
           <li><a href="https://www.va.gov/burials-memorials/" rel="noopener">VA burial &amp; memorial benefits</a></li>
           <li><a href="https://www.cem.va.gov/military_funeral_honors.asp" rel="noopener">Military funeral honors</a></li>
@@ -215,8 +228,8 @@
         </ul>
       </div>
       <div>
-        <h2 style="font-size:1.6rem">The Legion Family</h2>
-        <ul class="star-list">
+        <h2 style="font-size:1.6rem" data-edit="s4.heading_3">The Legion Family</h2>
+        <ul class="star-list" data-edit="s4.text_3" data-edit-type="rich" data-edit-count="1">
           <li><a href="https://www.legion.org/" rel="noopener">The American Legion</a> (national)</li>
           <li><a href="https://calegion.org/" rel="noopener">Department of California</a></li>
           <li><a href="https://www.legion-aux.org/" rel="noopener">American Legion Auxiliary</a></li>
@@ -230,8 +243,8 @@
   <section class="section">
     <div class="wrap grid grid--3" style="gap:2.5rem">
       <div>
-        <h2 style="font-size:1.6rem">Your elected officials</h2>
-        <ul class="star-list">
+        <h2 style="font-size:1.6rem" data-edit="s5.heading">Your elected officials</h2>
+        <ul class="star-list" data-edit="s5.text" data-edit-type="rich" data-edit-count="1">
           <li><a href="https://www.house.gov/representatives/find-your-representative" rel="noopener">Find your U.S. Representative</a></li>
           <li><a href="https://www.senate.gov/states/CA/intro.htm" rel="noopener">California's U.S. Senators</a></li>
           <li><a href="https://veterans.house.gov/" rel="noopener">House Veterans' Affairs Committee</a></li>
@@ -239,16 +252,16 @@
         </ul>
       </div>
       <div>
-        <h2 style="font-size:1.6rem">Military branches</h2>
-        <ul class="star-list">
+        <h2 style="font-size:1.6rem" data-edit="s5.heading_2">Military branches</h2>
+        <ul class="star-list" data-edit="s5.text_2" data-edit-type="rich" data-edit-count="1">
           <li><a href="https://www.army.mil/" rel="noopener">Army</a> · <a href="https://www.navy.mil/" rel="noopener">Navy</a></li>
           <li><a href="https://www.marines.mil/" rel="noopener">Marine Corps</a> · <a href="https://www.af.mil/" rel="noopener">Air Force</a></li>
           <li><a href="https://www.spaceforce.mil/" rel="noopener">Space Force</a> · <a href="https://www.uscg.mil/" rel="noopener">Coast Guard</a></li>
         </ul>
       </div>
       <div>
-        <h2 style="font-size:1.6rem">Other</h2>
-        <ul class="star-list">
+        <h2 style="font-size:1.6rem" data-edit="s5.heading_3">Other</h2>
+        <ul class="star-list" data-edit="s5.text_3" data-edit-type="rich" data-edit-count="1">
           <li><a href="https://www.dol.gov/agencies/vets" rel="noopener">Veterans' employment &amp; training (Dept. of Labor)</a></li>
           <li><a href="media/docs/veteran-license-plate-application.pdf" target="_blank" rel="noopener">California veteran license plate application (PDF)</a></li>
         </ul>
@@ -299,6 +312,7 @@
         <li><a href="post-everlasting.html">Post Everlasting</a></li>
         <li><a href="sal.html">Sons of The American Legion</a></li>
         <li><a href="auxiliary.html">Auxiliary</a></li>
+        <li><a href="news.html">News &amp; Photos</a></li>
         <li><a href="bugle.html">The Bugle</a></li>
         <li><a href="resources.html">Veteran Resources</a></li>
       </ul>
@@ -307,7 +321,7 @@
   <div class="footer-bottom">
     <div class="wrap">
       <p>© <span data-year>2026</span> American Legion Post 432, Cambria, California · Tax ID 95-6196709</p>
-      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/">Website editor login</a></p>
+      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/" data-edit-page>Edit this page</a></p>
     </div>
   </div>
 </footer>

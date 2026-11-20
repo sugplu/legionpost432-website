@@ -1,0 +1,17 @@
+{
+  "s1": {
+    "photo": "/media/images/legionnaire-reading.jpg",
+    "photo_alt": "",
+    "small_label": "Our monthly newsletter",
+    "title": "The Bugle",
+    "intro": "<p>News and notes from Post 432, the Auxiliary and the Sons — meetings, events, members and more. Read it online or print it out.</p>"
+  },
+  "s3": {
+    "heading": "Past issues",
+    "box_1": {
+      "heading": "Get The Bugle",
+      "text": "<p>Members receive The Bugle every month. Want to be added to the email list, or have news or a photo to share with the editor?</p>",
+      "button": "Contact the editor"
+    }
+  }
+}

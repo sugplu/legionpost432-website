@@ -16,6 +16,7 @@
 <link rel="preload" href="assets/fonts/librecaslontext-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script>document.documentElement.classList.add("edits-pending");setTimeout(function(){document.documentElement.classList.remove("edits-pending")},1500);</script>
 <noscript><style>@media (max-width:1139px){.mobile-menu[hidden]{display:block}.menu-button{display:none}}</style></noscript>
 <meta property="og:site_name" content="American Legion Post 432 · Cambria, California">
 <meta property="og:type" content="website">
@@ -82,7 +83,13 @@
             <li><a href="auxiliary.html">American Legion Auxiliary<span>Unit 432</span></a></li>
           </ul>
         </li>
-        <li><a class="nav__link" href="bugle.html">The Bugle</a></li>
+        <li>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-news">News <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="nav__menu" id="menu-news" hidden>
+            <li><a href="news.html">News &amp; Photos<span>Stories and pictures from the Post</span></a></li>
+            <li><a href="bugle.html">The Bugle<span>Our monthly newsletter</span></a></li>
+          </ul>
+        </li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li class="nav__cta"><a class="btn btn--primary btn--sm" href="join.html">Join Post 432</a></li>
       </ul>
@@ -122,6 +129,12 @@
         <ul>
           <li><a href="sal.html">Sons of The American Legion</a></li>
           <li><a href="auxiliary.html">American Legion Auxiliary</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu__group">
+        <p class="mobile-menu__label">News</p>
+        <ul>
+          <li><a href="news.html">News &amp; Photos</a></li>
           <li><a href="bugle.html">The Bugle newsletter</a></li>
         </ul>
       </div>
@@ -139,62 +152,62 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="page-hero__media"><img src="media/images/picnic-kids-games.jpg" alt="" width="1600" height="1200"></div>
+    <div class="page-hero__media"><img src="media/images/picnic-kids-games.jpg" alt="" width="1600" height="1200" data-edit-img="s1.photo"></div>
     <div class="wrap">
       <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li><li>Picnic in the Park</li></ol>
-      <p class="eyebrow">A Cambria tradition</p>
-      <h1>Fourth of July Picnic in the Park</h1>
-      <p class="lead">Every Independence Day, Post 432 invites the whole town — neighbors, families and visitors — to Shamel Park to celebrate our country's birthday together.</p>
+      <p class="eyebrow" data-edit="s1.small_label">A Cambria tradition</p>
+      <h1 data-edit="s1.title">Fourth of July Picnic in the Park</h1>
+      <p class="lead" data-edit="s1.intro" data-edit-type="rich" data-edit-count="1">Every Independence Day, Post 432 invites the whole town — neighbors, families and visitors — to Shamel Park to celebrate our country's birthday together.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap split">
       <div class="prose">
-        <p class="eyebrow">Thank you, Cambria!</p>
-        <h2>The 45th annual Picnic — on America's 250th birthday</h2>
-        <p>A heartfelt thank you to our community and our generous sponsors for making the 2026 American Legion Family Picnic in the Park such a great success. Your support, generosity and participation made it a wonderful celebration for everyone.</p>
-        <p>We also thank our dedicated volunteers. From planning and setup to serving and cleanup, your hard work did not go unnoticed. We look forward to celebrating with you again next year!</p>
+        <p class="eyebrow" data-edit="s2.small_label">Thank you, Cambria!</p>
+        <h2 data-edit="s2.heading">The 45th annual Picnic — on America's 250th birthday</h2>
+        <p data-edit="s2.text" data-edit-type="rich" data-edit-count="2">A heartfelt thank you to our community and our generous sponsors for making the 2026 American Legion Family Picnic in the Park such a great success. Your support, generosity and participation made it a wonderful celebration for everyone.</p>
+        <p data-edit-part="">We also thank our dedicated volunteers. From planning and setup to serving and cleanup, your hard work did not go unnoticed. We look forward to celebrating with you again next year!</p>
         <div class="notice">
-          <p style="margin:0"><strong>Save the date:</strong> the 46th annual Picnic in the Park is <strong>Sunday, July 4, 2027</strong> at Shamel Park. Schedule and volunteer sign-ups will be posted here in the spring.</p>
+          <p style="margin:0" data-edit="s2.box_1.text" data-edit-type="rich" data-edit-count="1"><strong>Save the date:</strong> the 46th annual Picnic in the Park is <strong>Sunday, July 4, 2027</strong> at Shamel Park. Schedule and volunteer sign-ups will be posted here in the spring.</p>
         </div>
       </div>
-      <figure class="photo photo--tall"><img src="media/images/picnic-flag-raising.jpg" alt="Two Legionnaires raise the American flag during the opening ceremony." width="1050" height="1400" loading="lazy" decoding="async"><figcaption>Raising the colors at the opening ceremony</figcaption></figure>
+      <figure class="photo photo--tall"><img src="media/images/picnic-flag-raising.jpg" alt="Two Legionnaires raise the American flag during the opening ceremony." width="1050" height="1400" loading="lazy" decoding="async" data-edit-img="s2.photo"><figcaption data-edit="s2.caption">Raising the colors at the opening ceremony</figcaption></figure>
     </div>
   </section>
 
   <section class="section section--white">
     <div class="wrap grid grid--2" style="gap:2.5rem">
       <div>
-        <p class="eyebrow">What to expect</p>
-        <h2>A day at the Picnic</h2>
-        <p class="muted small">Based on the 2026 schedule. The 2027 schedule will be posted closer to the day.</p>
+        <p class="eyebrow" data-edit="s3.small_label">What to expect</p>
+        <h2 data-edit="s3.heading">A day at the Picnic</h2>
+        <p class="muted small" data-edit="s3.text" data-edit-type="rich" data-edit-count="1">Based on the 2026 schedule. The 2027 schedule will be posted closer to the day.</p>
         <dl class="dl-grid">
-          <dt>11:00 AM</dt><dd>Opening ceremonies at the flagpole</dd>
-          <dt>11:30 AM</dt><dd>Folklorico dancers</dd>
-          <dt>12–3 PM</dt><dd>Waiter &amp; waitress relay races, Linn's Pie Eating Contest, and old-fashioned races for kids</dd>
-          <dt>Late afternoon</dt><dd>Raffle drawings</dd>
-          <dt>5:00 PM</dt><dd>Picnic ends — in time to catch fireworks elsewhere</dd>
+          <dt data-edit="s3.row_1_name">11:00 AM</dt><dd data-edit="s3.row_1_details">Opening ceremonies at the flagpole</dd>
+          <dt data-edit="s3.row_2_name">11:30 AM</dt><dd data-edit="s3.row_2_details">Folklorico dancers</dd>
+          <dt data-edit="s3.row_3_name">12–3 PM</dt><dd data-edit="s3.row_3_details">Waiter &amp; waitress relay races, Linn's Pie Eating Contest, and old-fashioned races for kids</dd>
+          <dt data-edit="s3.row_4_name">Late afternoon</dt><dd data-edit="s3.row_4_details">Raffle drawings</dd>
+          <dt data-edit="s3.row_5_name">5:00 PM</dt><dd data-edit="s3.row_5_details">Picnic ends — in time to catch fireworks elsewhere</dd>
         </dl>
-        <p><strong>All day:</strong> live DJ, face painting, games, and food and drinks from the Legion — every purchase supports Post 432's programs.</p>
+        <p data-edit="s3.text_2" data-edit-type="rich" data-edit-count="1"><strong>All day:</strong> live DJ, face painting, games, and food and drinks from the Legion — every purchase supports Post 432's programs.</p>
       </div>
       <div>
-        <p class="eyebrow">Getting there</p>
-        <h2>Shamel Park</h2>
-        <p>5455 Windsor Blvd., Cambria — where Windsor Blvd. meets the ocean.</p>
-        <p>Parking is limited, so please carpool or ride the <strong>Cambria trolley</strong>, which runs a Moonstone / Main Street route on the Fourth with no set stops — just wave it down.</p>
-        <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&amp;query=Shamel+Park+5455+Windsor+Blvd+Cambria+CA" rel="noopener">Map to Shamel Park</a>
-        <div class="notice notice--red" style="margin-top:1.5rem"><p><strong>Please, no fireworks and no personal barbecues</strong> in the park.</p></div>
+        <p class="eyebrow" data-edit="s3.small_label_2">Getting there</p>
+        <h2 data-edit="s3.heading_2">Shamel Park</h2>
+        <p data-edit="s3.text_3" data-edit-type="rich" data-edit-count="2">5455 Windsor Blvd., Cambria — where Windsor Blvd. meets the ocean.</p>
+        <p data-edit-part="">Parking is limited, so please carpool or ride the <strong>Cambria trolley</strong>, which runs a Moonstone / Main Street route on the Fourth with no set stops — just wave it down.</p>
+        <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&amp;query=Shamel+Park+5455+Windsor+Blvd+Cambria+CA" rel="noopener" data-edit="s3.button">Map to Shamel Park</a>
+        <div class="notice notice--red" style="margin-top:1.5rem"><p data-edit="s3.box_1.text" data-edit-type="rich" data-edit-count="1"><strong>Please, no fireworks and no personal barbecues</strong> in the park.</p></div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">Let's all have a good time</p><h2>Picnic do's and don'ts</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow" data-edit="s4.small_label">Let's all have a good time</p><h2 data-edit="s4.heading">Picnic do's and don'ts</h2></div></div>
       <div class="grid grid--2">
-        <div class="card card--plain"><div class="card__body"><h3>Do</h3>
-          <ul class="check-list" style="margin:.5rem 0 0">
+        <div class="card card--plain"><div class="card__body"><h3 data-edit="s4.box_1.heading">Do</h3>
+          <ul class="check-list" style="margin:.5rem 0 0" data-edit="s4.box_1.text" data-edit-type="rich" data-edit-count="1">
             <li>Bring sunscreen, lawn chairs and layers — it's the Central Coast!</li>
             <li>Carpool or ride the trolley, and park legally</li>
             <li>Join the games and the pie eating contest</li>
@@ -202,8 +215,8 @@
             <li>Keep pets on a leash, and take your trash with you</li>
             <li>Volunteer to help — and tell your friends and family</li>
           </ul></div></div>
-        <div class="card card--plain"><div class="card__body"><h3>Don't</h3>
-          <ul class="x-list" style="margin:.5rem 0 0">
+        <div class="card card--plain"><div class="card__body"><h3 data-edit="s4.box_2.heading">Don't</h3>
+          <ul class="x-list" style="margin:.5rem 0 0" data-edit="s4.box_2.text" data-edit-type="rich" data-edit-count="1">
             <li>Bring your own barbecue</li>
             <li>Bring fireworks</li>
             <li>Leave your trash behind</li>
@@ -215,8 +228,8 @@
 
   <section class="section section--white">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">2026 in pictures</p><h2>Scenes from the Picnic</h2></div><p class="small muted">Photos by Jane Hoover</p></div>
-      <ul class="gallery">
+      <div class="section-head"><div><p class="eyebrow" data-edit="s5.small_label">2026 in pictures</p><h2 data-edit="s5.heading">Scenes from the Picnic</h2></div><p class="small muted" data-edit="s5.text" data-edit-type="rich" data-edit-count="1">Photos by Jane Hoover</p></div>
+      <ul class="gallery" data-edit-list="s5.photos" data-edit-type="gallery">
         <li class="tall"><img src="media/images/picnic-salute.jpg" alt="Legionnaires salute during the national anthem." loading="lazy" decoding="async"></li>
         <li><img src="media/images/picnic-kids-games.jpg" alt="Kids racing in a sack race." loading="lazy" decoding="async"></li>
         <li><img src="media/images/picnic-pie-contest.jpg" alt="Contestants in the pie eating contest pose in front of the Linn's banner." loading="lazy" decoding="async"></li>
@@ -232,30 +245,30 @@
 
   <section class="section" id="sponsor">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">Sponsor the Picnic</p><h2>Help keep the tradition going</h2><p class="muted">Sponsorships make this free community event possible. 2026 levels are shown; 2027 details are coming soon.</p></div></div>
+      <div class="section-head"><div><p class="eyebrow" data-edit="s6.small_label">Sponsor the Picnic</p><h2 data-edit="s6.heading">Help keep the tradition going</h2><p class="muted" data-edit="s6.text" data-edit-type="rich" data-edit-count="1">Sponsorships make this free community event possible. 2026 levels are shown; 2027 details are coming soon.</p></div></div>
       <div class="grid grid--4">
-        <div class="card card--plain"><div class="card__body"><span class="card__kicker">Commodore</span><p style="margin:0;font:700 2rem/1.1 var(--font-serif);color:var(--navy-900)">$2,500</p><ul class="star-list small" style="margin:.5rem 0 0"><li>Custom 3′ × 8′ banner</li><li>Logo on this website</li><li>Live recognition at the event</li><li>Hand out your materials</li></ul></div></div>
-        <div class="card card--plain"><div class="card__body"><span class="card__kicker">Patriot</span><p style="margin:0;font:700 2rem/1.1 var(--font-serif);color:var(--navy-900)">$1,500</p><ul class="star-list small" style="margin:.5rem 0 0"><li>Name on the Patriot group banner</li><li>Logo on this website</li><li>Live recognition at the event</li><li>Hand out your materials</li></ul></div></div>
-        <div class="card card--plain"><div class="card__body"><span class="card__kicker">Eagle</span><p style="margin:0;font:700 2rem/1.1 var(--font-serif);color:var(--navy-900)">$1,000</p><ul class="star-list small" style="margin:.5rem 0 0"><li>Name on the Eagle group banner</li><li>Logo on this website</li><li>Live recognition at the event</li></ul></div></div>
-        <div class="card card--plain"><div class="card__body"><span class="card__kicker">Minuteman</span><p style="margin:0;font:700 2rem/1.1 var(--font-serif);color:var(--navy-900)">$500</p><ul class="star-list small" style="margin:.5rem 0 0"><li>Name on the Minuteman group banner</li><li>Logo on this website</li></ul></div></div>
+        <div class="card card--plain"><div class="card__body"><span class="card__kicker" data-edit="s6.box_1.small_label">Commodore</span><p style="margin:0;font:700 2rem/1.1 var(--font-serif);color:var(--navy-900)" data-edit="s6.box_1.text" data-edit-type="rich" data-edit-count="2">$2,500</p><ul class="star-list small" style="margin:.5rem 0 0" data-edit-part=""><li>Custom 3′ × 8′ banner</li><li>Logo on this website</li><li>Live recognition at the event</li><li>Hand out your materials</li></ul></div></div>
+        <div class="card card--plain"><div class="card__body"><span class="card__kicker" data-edit="s6.box_2.small_label">Patriot</span><p style="margin:0;font:700 2rem/1.1 var(--font-serif);color:var(--navy-900)" data-edit="s6.box_2.text" data-edit-type="rich" data-edit-count="2">$1,500</p><ul class="star-list small" style="margin:.5rem 0 0" data-edit-part=""><li>Name on the Patriot group banner</li><li>Logo on this website</li><li>Live recognition at the event</li><li>Hand out your materials</li></ul></div></div>
+        <div class="card card--plain"><div class="card__body"><span class="card__kicker" data-edit="s6.box_3.small_label">Eagle</span><p style="margin:0;font:700 2rem/1.1 var(--font-serif);color:var(--navy-900)" data-edit="s6.box_3.text" data-edit-type="rich" data-edit-count="2">$1,000</p><ul class="star-list small" style="margin:.5rem 0 0" data-edit-part=""><li>Name on the Eagle group banner</li><li>Logo on this website</li><li>Live recognition at the event</li></ul></div></div>
+        <div class="card card--plain"><div class="card__body"><span class="card__kicker" data-edit="s6.box_4.small_label">Minuteman</span><p style="margin:0;font:700 2rem/1.1 var(--font-serif);color:var(--navy-900)" data-edit="s6.box_4.text" data-edit-type="rich" data-edit-count="2">$500</p><ul class="star-list small" style="margin:.5rem 0 0" data-edit-part=""><li>Name on the Minuteman group banner</li><li>Logo on this website</li></ul></div></div>
       </div>
       <div class="notice" style="margin-top:1.5rem">
-        <p style="margin:0">To sponsor, call the Post at <a href="tel:+18059275010">(805) 927-5010</a> or <a href="contact.html">send us a message</a>. Donations can be mailed to Cambria American Legion Post 432, P.O. Box 697, Cambria, CA 93428. Post 432 is a tax-exempt organization, Tax ID 95-6196709.</p>
+        <p style="margin:0" data-edit="s6.box_5.text" data-edit-type="rich" data-edit-count="1">To sponsor, call the Post at <a href="tel:+18059275010">(805) 927-5010</a> or <a href="contact.html">send us a message</a>. Donations can be mailed to Cambria American Legion Post 432, P.O. Box 697, Cambria, CA 93428. Post 432 is a tax-exempt organization, Tax ID 95-6196709.</p>
       </div>
     </div>
   </section>
 
   <section class="section section--white">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">With gratitude</p><h2 data-sponsor-heading>Our sponsors</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow" data-edit="s7.small_label">With gratitude</p><h2 data-sponsor-heading>Our sponsors</h2></div></div>
       <div data-render="sponsors" data-by-level></div>
     </div>
   </section>
 
   <section class="join-band">
     <div class="wrap">
-      <div><h2>Many hands make light work</h2><p>Setup, serving, games, cleanup — there's a shift for everyone. Let us know you'd like to help next year.</p></div>
-      <div class="btn-row"><a class="btn btn--white" href="contact.html">I'd like to volunteer</a></div>
+      <div><h2 data-edit="s8.heading">Many hands make light work</h2><p data-edit="s8.text" data-edit-type="rich" data-edit-count="1">Setup, serving, games, cleanup — there's a shift for everyone. Let us know you'd like to help next year.</p></div>
+      <div class="btn-row"><a class="btn btn--white" href="contact.html" data-edit="s8.button">I'd like to volunteer</a></div>
     </div>
   </section>
 </main>
@@ -302,6 +315,7 @@
         <li><a href="post-everlasting.html">Post Everlasting</a></li>
         <li><a href="sal.html">Sons of The American Legion</a></li>
         <li><a href="auxiliary.html">Auxiliary</a></li>
+        <li><a href="news.html">News &amp; Photos</a></li>
         <li><a href="bugle.html">The Bugle</a></li>
         <li><a href="resources.html">Veteran Resources</a></li>
       </ul>
@@ -310,7 +324,7 @@
   <div class="footer-bottom">
     <div class="wrap">
       <p>© <span data-year>2026</span> American Legion Post 432, Cambria, California · Tax ID 95-6196709</p>
-      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/">Website editor login</a></p>
+      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/" data-edit-page>Edit this page</a></p>
     </div>
   </div>
 </footer>

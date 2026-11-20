@@ -1,0 +1,130 @@
+{
+  "s1": {
+    "photo": "/media/images/picnic-kids-games.jpg",
+    "photo_alt": "",
+    "small_label": "A Cambria tradition",
+    "title": "Fourth of July Picnic in the Park",
+    "intro": "<p>Every Independence Day, Post 432 invites the whole town — neighbors, families and visitors — to Shamel Park to celebrate our country's birthday together.</p>"
+  },
+  "s2": {
+    "small_label": "Thank you, Cambria!",
+    "heading": "The 45th annual Picnic — on America's 250th birthday",
+    "text": "<p>A heartfelt thank you to our community and our generous sponsors for making the 2026 American Legion Family Picnic in the Park such a great success. Your support, generosity and participation made it a wonderful celebration for everyone.</p><p>We also thank our dedicated volunteers. From planning and setup to serving and cleanup, your hard work did not go unnoticed. We look forward to celebrating with you again next year!</p>",
+    "box_1": {
+      "text": "<p><strong>Save the date:</strong> the 46th annual Picnic in the Park is <strong>Sunday, July 4, 2027</strong> at Shamel Park. Schedule and volunteer sign-ups will be posted here in the spring.</p>"
+    },
+    "photo": "/media/images/picnic-flag-raising.jpg",
+    "photo_alt": "Two Legionnaires raise the American flag during the opening ceremony.",
+    "caption": "Raising the colors at the opening ceremony"
+  },
+  "s3": {
+    "small_label": "What to expect",
+    "heading": "A day at the Picnic",
+    "text": "<p>Based on the 2026 schedule. The 2027 schedule will be posted closer to the day.</p>",
+    "row_1_name": "11:00 AM",
+    "row_1_details": "Opening ceremonies at the flagpole",
+    "row_2_name": "11:30 AM",
+    "row_2_details": "Folklorico dancers",
+    "row_3_name": "12–3 PM",
+    "row_3_details": "Waiter & waitress relay races, Linn's Pie Eating Contest, and old-fashioned races for kids",
+    "row_4_name": "Late afternoon",
+    "row_4_details": "Raffle drawings",
+    "row_5_name": "5:00 PM",
+    "row_5_details": "Picnic ends — in time to catch fireworks elsewhere",
+    "text_2": "<p><strong>All day:</strong> live DJ, face painting, games, and food and drinks from the Legion — every purchase supports Post 432's programs.</p>",
+    "small_label_2": "Getting there",
+    "heading_2": "Shamel Park",
+    "text_3": "<p>5455 Windsor Blvd., Cambria — where Windsor Blvd. meets the ocean.</p><p>Parking is limited, so please carpool or ride the <strong>Cambria trolley</strong>, which runs a Moonstone / Main Street route on the Fourth with no set stops — just wave it down.</p>",
+    "button": "Map to Shamel Park",
+    "box_1": {
+      "text": "<p><strong>Please, no fireworks and no personal barbecues</strong> in the park.</p>"
+    }
+  },
+  "s4": {
+    "small_label": "Let's all have a good time",
+    "heading": "Picnic do's and don'ts",
+    "box_1": {
+      "heading": "Do",
+      "text": "<ul><li>Bring sunscreen, lawn chairs and layers — it's the Central Coast!</li><li>Carpool or ride the trolley, and park legally</li><li>Join the games and the pie eating contest</li><li>Buy raffle tickets and food on site to support the Legion</li><li>Keep pets on a leash, and take your trash with you</li><li>Volunteer to help — and tell your friends and family</li></ul>"
+    },
+    "box_2": {
+      "heading": "Don't",
+      "text": "<ul><li>Bring your own barbecue</li><li>Bring fireworks</li><li>Leave your trash behind</li><li>Forget your wallet or phone charger</li></ul>"
+    }
+  },
+  "s5": {
+    "small_label": "2026 in pictures",
+    "heading": "Scenes from the Picnic",
+    "text": "<p>Photos by Jane Hoover</p>",
+    "photos": [
+      {
+        "photo": "/media/images/picnic-salute.jpg",
+        "description": "Legionnaires salute during the national anthem."
+      },
+      {
+        "photo": "/media/images/picnic-kids-games.jpg",
+        "description": "Kids racing in a sack race."
+      },
+      {
+        "photo": "/media/images/picnic-pie-contest.jpg",
+        "description": "Contestants in the pie eating contest pose in front of the Linn's banner."
+      },
+      {
+        "photo": "/media/images/picnic-folklorico.jpg",
+        "description": "Folklorico dancers in white perform."
+      },
+      {
+        "photo": "/media/images/picnic-cooks.jpg",
+        "description": "Volunteers in cowboy hats wave from the grill."
+      },
+      {
+        "photo": "/media/images/auxiliary-bingo-car.jpg",
+        "description": "The Auxiliary's flag-covered car advertising monthly Bingo."
+      },
+      {
+        "photo": "/media/images/picnic-crowd.jpg",
+        "description": "Families gather on the lawn at Shamel Park."
+      },
+      {
+        "photo": "/media/images/sal-bbq-pit.jpg",
+        "description": "Cooks tend the barbecue pit."
+      },
+      {
+        "photo": "/media/images/picnic-volunteers.jpg",
+        "description": "Two volunteers at the food tent."
+      }
+    ]
+  },
+  "s6": {
+    "small_label": "Sponsor the Picnic",
+    "heading": "Help keep the tradition going",
+    "text": "<p>Sponsorships make this free community event possible. 2026 levels are shown; 2027 details are coming soon.</p>",
+    "box_1": {
+      "small_label": "Commodore",
+      "text": "<p>$2,500</p><ul><li>Custom 3′ × 8′ banner</li><li>Logo on this website</li><li>Live recognition at the event</li><li>Hand out your materials</li></ul>"
+    },
+    "box_2": {
+      "small_label": "Patriot",
+      "text": "<p>$1,500</p><ul><li>Name on the Patriot group banner</li><li>Logo on this website</li><li>Live recognition at the event</li><li>Hand out your materials</li></ul>"
+    },
+    "box_3": {
+      "small_label": "Eagle",
+      "text": "<p>$1,000</p><ul><li>Name on the Eagle group banner</li><li>Logo on this website</li><li>Live recognition at the event</li></ul>"
+    },
+    "box_4": {
+      "small_label": "Minuteman",
+      "text": "<p>$500</p><ul><li>Name on the Minuteman group banner</li><li>Logo on this website</li></ul>"
+    },
+    "box_5": {
+      "text": "<p>To sponsor, call the Post at <a href=\"tel:+18059275010\">(805) 927-5010</a> or <a href=\"contact.html\">send us a message</a>. Donations can be mailed to Cambria American Legion Post 432, P.O. Box 697, Cambria, CA 93428. Post 432 is a tax-exempt organization, Tax ID 95-6196709.</p>"
+    }
+  },
+  "s7": {
+    "small_label": "With gratitude"
+  },
+  "s8": {
+    "heading": "Many hands make light work",
+    "text": "<p>Setup, serving, games, cleanup — there's a shift for everyone. Let us know you'd like to help next year.</p>",
+    "button": "I'd like to volunteer"
+  }
+}

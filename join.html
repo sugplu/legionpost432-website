@@ -16,6 +16,7 @@
 <link rel="preload" href="assets/fonts/librecaslontext-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script>document.documentElement.classList.add("edits-pending");setTimeout(function(){document.documentElement.classList.remove("edits-pending")},1500);</script>
 <noscript><style>@media (max-width:1139px){.mobile-menu[hidden]{display:block}.menu-button{display:none}}</style></noscript>
 <meta property="og:site_name" content="American Legion Post 432 · Cambria, California">
 <meta property="og:type" content="website">
@@ -82,7 +83,13 @@
             <li><a href="auxiliary.html">American Legion Auxiliary<span>Unit 432</span></a></li>
           </ul>
         </li>
-        <li><a class="nav__link" href="bugle.html">The Bugle</a></li>
+        <li>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-news">News <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="nav__menu" id="menu-news" hidden>
+            <li><a href="news.html">News &amp; Photos<span>Stories and pictures from the Post</span></a></li>
+            <li><a href="bugle.html">The Bugle<span>Our monthly newsletter</span></a></li>
+          </ul>
+        </li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li class="nav__cta"><a class="btn btn--primary btn--sm" href="join.html" aria-current="page">Join Post 432</a></li>
       </ul>
@@ -122,6 +129,12 @@
         <ul>
           <li><a href="sal.html">Sons of The American Legion</a></li>
           <li><a href="auxiliary.html">American Legion Auxiliary</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu__group">
+        <p class="mobile-menu__label">News</p>
+        <ul>
+          <li><a href="news.html">News &amp; Photos</a></li>
           <li><a href="bugle.html">The Bugle newsletter</a></li>
         </ul>
       </div>
@@ -139,12 +152,12 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="page-hero__media"><img src="media/images/picnic-volunteers.jpg" alt="" width="1050" height="1400" style="object-position:50% 30%"></div>
+    <div class="page-hero__media"><img src="media/images/picnic-volunteers.jpg" alt="" width="1050" height="1400" style="object-position:50% 30%" data-edit-img="s1.photo"></div>
     <div class="wrap">
       <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Join</li></ol>
-      <p class="eyebrow">Join the Legion Family</p>
-      <h1>There's a place for you at Post 432</h1>
-      <p class="lead">Whether you served, or you love someone who did, you can be part of the American Legion Family in Cambria. Find the right fit below — and if you're not sure, just call. We're happy to help.</p>
+      <p class="eyebrow" data-edit="s1.small_label">Join the Legion Family</p>
+      <h1 data-edit="s1.title">There's a place for you at Post 432</h1>
+      <p class="lead" data-edit="s1.intro" data-edit-type="rich" data-edit-count="1">Whether you served, or you love someone who did, you can be part of the American Legion Family in Cambria. Find the right fit below — and if you're not sure, just call. We're happy to help.</p>
     </div>
   </section>
 
@@ -153,20 +166,20 @@
       <div class="grid grid--3">
         <a class="card family-card" href="#legion">
           <img src="assets/img/legion-emblem.png" alt="" width="233" height="244">
-          <h3>I served in the military</h3>
-          <p>Join <strong>The American Legion</strong> at Post 432.</p>
+          <h3 data-edit="s2.box_1.heading">I served in the military</h3>
+          <p data-edit="s2.box_1.text">Join <strong>The American Legion</strong> at Post 432.</p>
           <span class="card__more">Eligibility &amp; dues →</span>
         </a>
         <a class="card family-card" href="#sal">
           <img src="assets/img/sal-emblem.png" alt="" width="71" height="88">
-          <h3>My father or grandfather served</h3>
-          <p>Join the <strong>Sons of The American Legion</strong>, Squadron 432.</p>
+          <h3 data-edit="s2.box_2.heading">My father or grandfather served</h3>
+          <p data-edit="s2.box_2.text">Join the <strong>Sons of The American Legion</strong>, Squadron 432.</p>
           <span class="card__more">SAL membership →</span>
         </a>
         <a class="card family-card" href="#auxiliary">
           <img src="assets/img/auxiliary-emblem.png" alt="" width="88" height="90">
-          <h3>Someone in my family served</h3>
-          <p>Join the <strong>American Legion Auxiliary</strong>, Unit 432.</p>
+          <h3 data-edit="s2.box_3.heading">Someone in my family served</h3>
+          <p data-edit="s2.box_3.text">Join the <strong>American Legion Auxiliary</strong>, Unit 432.</p>
           <span class="card__more">Auxiliary membership →</span>
         </a>
       </div>
@@ -176,34 +189,34 @@
   <section class="section section--white" id="legion">
     <div class="wrap sidebar-layout">
       <div class="prose">
-        <p class="eyebrow">The American Legion</p>
-        <h2>Who can join</h2>
-        <p>You're eligible if you served <strong>at least one day of active military duty since December 7, 1941</strong>, and were honorably discharged or are still serving honorably. You don't need to have served overseas or in combat.</p>
-        <ul class="pill-row" aria-label="Eligible branches">
+        <p class="eyebrow" data-edit="s3.small_label">The American Legion</p>
+        <h2 data-edit="s3.heading">Who can join</h2>
+        <p data-edit="s3.text" data-edit-type="rich" data-edit-count="2">You're eligible if you served <strong>at least one day of active military duty since December 7, 1941</strong>, and were honorably discharged or are still serving honorably. You don't need to have served overseas or in combat.</p>
+        <ul class="pill-row" aria-label="Eligible branches" data-edit-part="">
           <li>Army</li><li>Navy</li><li>Marine Corps</li><li>Air Force</li><li>Space Force</li><li>Coast Guard</li>
         </ul>
-        <ul class="star-list">
+        <ul class="star-list" data-edit="s3.text_2" data-edit-type="rich" data-edit-count="1">
           <li><strong>National Guard and Reserves:</strong> you may be eligible if you served on federal active-duty orders (such as Title 10 orders). Not sure? Bring your paperwork and we'll help you check.</li>
           <li><strong>U.S. Merchant Marine:</strong> those who served between December 7, 1941, and December 31, 1946, may also qualify.</li>
         </ul>
 
-        <h3 style="margin-top:2rem">How to join</h3>
-        <ol class="steps">
+        <h3 style="margin-top:2rem" data-edit="s3.heading_2">How to join</h3>
+        <ol class="steps" data-edit="s3.text_3" data-edit-type="rich" data-edit-count="2">
           <li><strong>Download the application</strong><a href="media/docs/legion-membership-application.pdf" target="_blank" rel="noopener">Post 432 membership application (PDF)</a> — or pick one up at the Club.</li>
           <li><strong>Attach a copy of your DD-214</strong>Lost yours? <a href="https://www.archives.gov/veterans/military-service-records" rel="noopener">Request a free copy from the National Archives</a>.</li>
           <li><strong>Mail it with your check</strong>American Legion Post 432, P.O. Box 697, Cambria, CA 93428-0697 — or bring it to a general meeting.</li>
         </ol>
-        <p class="small muted" style="margin-top:1rem">Already a Legionnaire somewhere else? Use the same form to transfer to Post 432. You can also join online at <a href="https://www.legion.org/join" rel="noopener">legion.org/join</a> — then give us a call so we can welcome you to Post 432.</p>
+        <p class="small muted" style="margin-top:1rem" data-edit-part="">Already a Legionnaire somewhere else? Use the same form to transfer to Post 432. You can also join online at <a href="https://www.legion.org/join" rel="noopener">legion.org/join</a> — then give us a call so we can welcome you to Post 432.</p>
       </div>
       <aside>
         <div class="callout">
-          <p class="eyebrow">Dues</p>
-          <p style="margin:0;font:700 2.4rem/1.1 var(--font-serif);color:#fff">$120</p>
-          <p>First year, including a Legion cap and membership card case.</p>
-          <p style="margin:0;font:700 2.4rem/1.1 var(--font-serif);color:#fff">$50</p>
-          <p>Each year after that.</p>
-          <a class="btn btn--primary" href="media/docs/legion-membership-application.pdf" target="_blank" rel="noopener" style="width:100%">Download application</a>
-          <p class="small" style="margin:1rem 0 0">Questions? Call <a href="tel:+18059275010">(805) 927-5010</a>.</p>
+          <p class="eyebrow" data-edit="s3.box_1.small_label">Dues</p>
+          <p style="margin:0;font:700 2.4rem/1.1 var(--font-serif);color:#fff" data-edit="s3.box_1.text" data-edit-type="rich" data-edit-count="4">$120</p>
+          <p data-edit-part="">First year, including a Legion cap and membership card case.</p>
+          <p style="margin:0;font:700 2.4rem/1.1 var(--font-serif);color:#fff" data-edit-part="">$50</p>
+          <p data-edit-part="">Each year after that.</p>
+          <a class="btn btn--primary" href="media/docs/legion-membership-application.pdf" target="_blank" rel="noopener" style="width:100%" data-edit="s3.box_1.button">Download application</a>
+          <p class="small" style="margin:1rem 0 0" data-edit="s3.box_1.text_2" data-edit-type="rich" data-edit-count="1">Questions? Call <a href="tel:+18059275010">(805) 927-5010</a>.</p>
         </div>
       </aside>
     </div>
@@ -212,20 +225,20 @@
   <section class="section" id="sal">
     <div class="wrap sidebar-layout">
       <div class="prose">
-        <p class="eyebrow">Sons of The American Legion</p>
-        <h2>Honor your family's service</h2>
-        <p>You can join the Sons of The American Legion if you are a male descendant — including sons, stepsons and adopted sons — of:</p>
-        <ul class="check-list">
+        <p class="eyebrow" data-edit="s4.small_label">Sons of The American Legion</p>
+        <h2 data-edit="s4.heading">Honor your family's service</h2>
+        <p data-edit="s4.text" data-edit-type="rich" data-edit-count="3">You can join the Sons of The American Legion if you are a male descendant — including sons, stepsons and adopted sons — of:</p>
+        <ul class="check-list" data-edit-part="">
           <li>a member of The American Legion, or</li>
           <li>a veteran who served during an eligible period and died while serving, or who later received an honorable discharge.</li>
         </ul>
-        <p>Make checks payable to <strong>“SAL Squadron 432”</strong> and mail with your application to P.O. Box 697, Cambria, CA 93428-0697. <a href="sal.html">Learn more about Squadron 432</a>.</p>
+        <p data-edit-part="">Make checks payable to <strong>“SAL Squadron 432”</strong> and mail with your application to P.O. Box 697, Cambria, CA 93428-0697. <a href="sal.html">Learn more about Squadron 432</a>.</p>
       </div>
       <aside>
         <div class="card card--plain"><div class="card__body">
-          <span class="card__kicker">SAL dues</span>
-          <p style="margin:0;font:700 2.2rem/1.1 var(--font-serif);color:var(--navy-900)">$30<span style="font:400 1rem var(--font-sans);color:var(--ink-2)"> / year</span></p>
-          <a class="btn btn--navy" href="media/docs/sal-membership-application.pdf" target="_blank" rel="noopener" style="margin-top:.75rem">SAL application (PDF)</a>
+          <span class="card__kicker" data-edit="s4.box_1.small_label">SAL dues</span>
+          <p style="margin:0;font:700 2.2rem/1.1 var(--font-serif);color:var(--navy-900)" data-edit="s4.box_1.text" data-edit-type="rich" data-edit-count="1">$30<span style="font:400 1rem var(--font-sans);color:var(--ink-2)"> / year</span></p>
+          <a class="btn btn--navy" href="media/docs/sal-membership-application.pdf" target="_blank" rel="noopener" style="margin-top:.75rem" data-edit="s4.box_1.button">SAL application (PDF)</a>
         </div></div>
       </aside>
     </div>
@@ -234,16 +247,16 @@
   <section class="section section--white" id="auxiliary">
     <div class="wrap sidebar-layout">
       <div class="prose">
-        <p class="eyebrow">American Legion Auxiliary</p>
-        <h2>“Service, Not Self”</h2>
-        <p>The American Legion Auxiliary welcomes family members of veterans who are eligible for The American Legion. Auxiliary members support veterans, military families, young people and our community — and Unit 432 puts on our Thursday night dinners and monthly Bingo.</p>
-        <p>Eligibility rules depend on your relationship to the veteran, so the easiest way to find out is to ask. Call the Post or <a href="contact.html">send us a message</a> and an Auxiliary officer will help. <a href="auxiliary.html">Learn more about Unit 432</a>.</p>
+        <p class="eyebrow" data-edit="s5.small_label">American Legion Auxiliary</p>
+        <h2 data-edit="s5.heading">“Service, Not Self”</h2>
+        <p data-edit="s5.text" data-edit-type="rich" data-edit-count="2">The American Legion Auxiliary welcomes family members of veterans who are eligible for The American Legion. Auxiliary members support veterans, military families, young people and our community — and Unit 432 puts on our Thursday night dinners and monthly Bingo.</p>
+        <p data-edit-part="">Eligibility rules depend on your relationship to the veteran, so the easiest way to find out is to ask. Call the Post or <a href="contact.html">send us a message</a> and an Auxiliary officer will help. <a href="auxiliary.html">Learn more about Unit 432</a>.</p>
       </div>
       <aside>
         <div class="card card--plain"><div class="card__body">
-          <span class="card__kicker">Auxiliary</span>
-          <p>Download the application, or pick one up at a Thursday dinner.</p>
-          <a class="btn btn--navy" href="media/docs/auxiliary-membership-application.pdf" target="_blank" rel="noopener">Auxiliary application (PDF)</a>
+          <span class="card__kicker" data-edit="s5.box_1.small_label">Auxiliary</span>
+          <p data-edit="s5.box_1.text" data-edit-type="rich" data-edit-count="1">Download the application, or pick one up at a Thursday dinner.</p>
+          <a class="btn btn--navy" href="media/docs/auxiliary-membership-application.pdf" target="_blank" rel="noopener" data-edit="s5.box_1.button">Auxiliary application (PDF)</a>
         </div></div>
       </aside>
     </div>
@@ -251,8 +264,8 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">Questions</p><h2>Common questions</h2></div></div>
-      <div class="faq prose" style="max-width:none">
+      <div class="section-head"><div><p class="eyebrow" data-edit="s6.small_label">Questions</p><h2 data-edit="s6.heading">Common questions</h2></div></div>
+      <div class="faq prose" style="max-width:none" data-edit-list="s6.questions" data-edit-type="faq">
         <details><summary>Do I have to live in Cambria?</summary><div><p>No. You can belong to any American Legion post you like. Many of our members live in Cambria, Cayucos, San Simeon and nearby towns.</p></div></details>
         <details><summary>I can't find my DD-214. What do I do?</summary><div><p>Veterans and next of kin can request military records free of charge from the <a href="https://www.archives.gov/veterans/military-service-records" rel="noopener">National Archives</a>. The <a href="resources.html#local">San Luis Obispo County Veterans Services Office</a> can also help.</p></div></details>
         <details><summary>What do I get as a member?</summary><div><p>Fellowship with fellow veterans, Club 432 privileges for you and your guests, The Bugle newsletter, The American Legion Magazine, member discounts from The American Legion — and the satisfaction of serving your community alongside people who understand.</p></div></details>
@@ -304,6 +317,7 @@
         <li><a href="post-everlasting.html">Post Everlasting</a></li>
         <li><a href="sal.html">Sons of The American Legion</a></li>
         <li><a href="auxiliary.html">Auxiliary</a></li>
+        <li><a href="news.html">News &amp; Photos</a></li>
         <li><a href="bugle.html">The Bugle</a></li>
         <li><a href="resources.html">Veteran Resources</a></li>
       </ul>
@@ -312,7 +326,7 @@
   <div class="footer-bottom">
     <div class="wrap">
       <p>© <span data-year>2026</span> American Legion Post 432, Cambria, California · Tax ID 95-6196709</p>
-      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/">Website editor login</a></p>
+      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/" data-edit-page>Edit this page</a></p>
     </div>
   </div>
 </footer>

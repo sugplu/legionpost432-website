@@ -1,0 +1,36 @@
+{
+  "s1": {
+    "photo": "/media/images/picnic-cooks.jpg",
+    "photo_alt": "",
+    "small_label": "Events & Calendar",
+    "title": "There's always something going on",
+    "intro": "<p>Pancake breakfasts, Bingo nights, home-cooked dinners, meetings with guest speakers — and the biggest day of our year, the Fourth of July Picnic in the Park.</p>"
+  },
+  "s2": {
+    "small_label": "Next few weeks",
+    "heading": "Coming up",
+    "box_1": {
+      "small_label": "Where",
+      "heading": "Legion Dining Room & Club 432",
+      "text": "<p>At the back of the Veterans Memorial Hall, 1000 Main Street, Cambria.</p>",
+      "button": "Get directions"
+    },
+    "box_2": {
+      "text": "<p><strong>Who's welcome?</strong> Pancake breakfasts and Bingo are open to everyone. Club nights and dinners are for members and their guests — come as a guest of a member, or <a href=\"join.html\">join us</a>.</p>"
+    }
+  },
+  "s3": {
+    "small_label": "Special events",
+    "heading": "Save the date"
+  },
+  "s4": {
+    "small_label": "Every week & every month",
+    "heading": "Our regular schedule",
+    "text": "<p>The \"Next\" dates update by themselves.</p>"
+  },
+  "s5": {
+    "small_label": "Full calendar",
+    "heading": "Post, Auxiliary & Club calendar",
+    "text": "<p>Kept up to date by the Post and Auxiliary in Google Calendar. On a phone, it shows as a list.</p>"
+  }
+}

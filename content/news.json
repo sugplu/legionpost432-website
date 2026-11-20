@@ -1,0 +1,17 @@
+{
+  "stories": [
+    {
+      "title": "Thank you, Cambria, for a wonderful Picnic in the Park",
+      "date": "2026-07-04",
+      "photo": "/media/images/picnic-crowd.jpg",
+      "photo_alt": "A crowd gathers on the lawn at Shamel Park for the Fourth of July Picnic.",
+      "story": "<p>A heartfelt thank you to our community and our generous sponsors for making the 45th annual American Legion Family Picnic in the Park, on America's 250th birthday, such a great success. Your support, generosity and participation made it a wonderful celebration for everyone.</p><p>We also thank our dedicated volunteers. From planning and setup to serving and cleanup, your hard work did not go unnoticed. We look forward to celebrating with you again next year on Sunday, July 4, 2027 at Shamel Park.</p>",
+      "more_photos": [
+        "/media/images/picnic-salute.jpg",
+        "/media/images/picnic-kids-games.jpg",
+        "/media/images/picnic-folklorico.jpg",
+        "/media/images/picnic-cooks.jpg"
+      ]
+    }
+  ]
+}

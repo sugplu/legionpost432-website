@@ -16,6 +16,7 @@
 <link rel="preload" href="assets/fonts/librecaslontext-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script>document.documentElement.classList.add("edits-pending");setTimeout(function(){document.documentElement.classList.remove("edits-pending")},1500);</script>
 <noscript><style>@media (max-width:1139px){.mobile-menu[hidden]{display:block}.menu-button{display:none}}</style></noscript>
 <meta property="og:site_name" content="American Legion Post 432 · Cambria, California">
 <meta property="og:type" content="website">
@@ -82,7 +83,13 @@
             <li><a href="auxiliary.html">American Legion Auxiliary<span>Unit 432</span></a></li>
           </ul>
         </li>
-        <li><a class="nav__link" href="bugle.html" aria-current="page">The Bugle</a></li>
+        <li>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-news">News <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="nav__menu" id="menu-news" hidden>
+            <li><a href="news.html">News &amp; Photos<span>Stories and pictures from the Post</span></a></li>
+            <li><a href="bugle.html" aria-current="page">The Bugle<span>Our monthly newsletter</span></a></li>
+          </ul>
+        </li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li class="nav__cta"><a class="btn btn--primary btn--sm" href="join.html">Join Post 432</a></li>
       </ul>
@@ -122,6 +129,12 @@
         <ul>
           <li><a href="sal.html">Sons of The American Legion</a></li>
           <li><a href="auxiliary.html">American Legion Auxiliary</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu__group">
+        <p class="mobile-menu__label">News</p>
+        <ul>
+          <li><a href="news.html">News &amp; Photos</a></li>
           <li><a href="bugle.html" aria-current="page">The Bugle newsletter</a></li>
         </ul>
       </div>
@@ -139,12 +152,12 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="page-hero__media"><img src="media/images/legionnaire-reading.jpg" alt="" width="1050" height="1400" style="object-position:50% 25%"></div>
+    <div class="page-hero__media"><img src="media/images/legionnaire-reading.jpg" alt="" width="1050" height="1400" style="object-position:50% 25%" data-edit-img="s1.photo"></div>
     <div class="wrap">
       <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>The Bugle</li></ol>
-      <p class="eyebrow">Our monthly newsletter</p>
-      <h1>The Bugle</h1>
-      <p class="lead">News and notes from Post 432, the Auxiliary and the Sons — meetings, events, members and more. Read it online or print it out.</p>
+      <p class="eyebrow" data-edit="s1.small_label">Our monthly newsletter</p>
+      <h1 data-edit="s1.title">The Bugle</h1>
+      <p class="lead" data-edit="s1.intro" data-edit-type="rich" data-edit-count="1">News and notes from Post 432, the Auxiliary and the Sons — meetings, events, members and more. Read it online or print it out.</p>
     </div>
   </section>
 
@@ -168,13 +181,13 @@
   <section class="section section--white" id="archive">
     <div class="wrap sidebar-layout">
       <div>
-        <h2>Past issues</h2>
+        <h2 data-edit="s3.heading">Past issues</h2>
         <div data-render="bugle-list"><noscript><p class="noscript">Turn on JavaScript to see past issues.</p></noscript></div>
       </div>
       <aside class="notice">
-        <h3>Get The Bugle</h3>
-        <p>Members receive The Bugle every month. Want to be added to the email list, or have news or a photo to share with the editor?</p>
-        <a class="btn btn--navy btn--sm" href="contact.html">Contact the editor</a>
+        <h3 data-edit="s3.box_1.heading">Get The Bugle</h3>
+        <p data-edit="s3.box_1.text" data-edit-type="rich" data-edit-count="1">Members receive The Bugle every month. Want to be added to the email list, or have news or a photo to share with the editor?</p>
+        <a class="btn btn--navy btn--sm" href="contact.html" data-edit="s3.box_1.button">Contact the editor</a>
       </aside>
     </div>
   </section>
@@ -222,6 +235,7 @@
         <li><a href="post-everlasting.html">Post Everlasting</a></li>
         <li><a href="sal.html">Sons of The American Legion</a></li>
         <li><a href="auxiliary.html">Auxiliary</a></li>
+        <li><a href="news.html">News &amp; Photos</a></li>
         <li><a href="bugle.html">The Bugle</a></li>
         <li><a href="resources.html">Veteran Resources</a></li>
       </ul>
@@ -230,7 +244,7 @@
   <div class="footer-bottom">
     <div class="wrap">
       <p>© <span data-year>2026</span> American Legion Post 432, Cambria, California · Tax ID 95-6196709</p>
-      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/">Website editor login</a></p>
+      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/" data-edit-page>Edit this page</a></p>
     </div>
   </div>
 </footer>

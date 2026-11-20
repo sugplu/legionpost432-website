@@ -16,6 +16,7 @@
 <link rel="preload" href="assets/fonts/librecaslontext-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script>document.documentElement.classList.add("edits-pending");setTimeout(function(){document.documentElement.classList.remove("edits-pending")},1500);</script>
 <noscript><style>@media (max-width:1139px){.mobile-menu[hidden]{display:block}.menu-button{display:none}}</style></noscript>
 <meta property="og:site_name" content="American Legion Post 432 · Cambria, California">
 <meta property="og:type" content="website">
@@ -82,7 +83,13 @@
             <li><a href="auxiliary.html">American Legion Auxiliary<span>Unit 432</span></a></li>
           </ul>
         </li>
-        <li><a class="nav__link" href="bugle.html">The Bugle</a></li>
+        <li>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-news">News <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="nav__menu" id="menu-news" hidden>
+            <li><a href="news.html">News &amp; Photos<span>Stories and pictures from the Post</span></a></li>
+            <li><a href="bugle.html">The Bugle<span>Our monthly newsletter</span></a></li>
+          </ul>
+        </li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li class="nav__cta"><a class="btn btn--primary btn--sm" href="join.html">Join Post 432</a></li>
       </ul>
@@ -122,6 +129,12 @@
         <ul>
           <li><a href="sal.html">Sons of The American Legion</a></li>
           <li><a href="auxiliary.html">American Legion Auxiliary</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu__group">
+        <p class="mobile-menu__label">News</p>
+        <ul>
+          <li><a href="news.html">News &amp; Photos</a></li>
           <li><a href="bugle.html">The Bugle newsletter</a></li>
         </ul>
       </div>
@@ -139,32 +152,32 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="page-hero__media"><img src="media/images/picnic-salute.jpg" alt="" width="1033" height="1400" style="object-position:50% 25%"></div>
+    <div class="page-hero__media"><img src="media/images/picnic-salute.jpg" alt="" width="1033" height="1400" style="object-position:50% 25%" data-edit-img="s1.photo"></div>
     <div class="wrap">
       <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Programs</li><li>Post Everlasting</li></ol>
-      <p class="eyebrow">In memoriam</p>
-      <h1>Post Everlasting</h1>
-      <p class="lead">Comrades who have gone before us. Their service, and their place in our Legion Family, will never be forgotten.</p>
+      <p class="eyebrow" data-edit="s1.small_label">In memoriam</p>
+      <h1 data-edit="s1.title">Post Everlasting</h1>
+      <p class="lead" data-edit="s1.intro" data-edit-type="rich" data-edit-count="1">Comrades who have gone before us. Their service, and their place in our Legion Family, will never be forgotten.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap split split--top">
       <div class="prose">
-        <h2>What “Post Everlasting” means</h2>
-        <p>“Post Everlasting” is The American Legion's tribute to members who have passed away. It stands for the lasting legacy of veterans whose service, sacrifice and dedication to our country and community live on in the hearts of their fellow Legionnaires, their loved ones and the town they served.</p>
+        <h2 data-edit="s2.heading">What “Post Everlasting” means</h2>
+        <p data-edit="s2.text" data-edit-type="rich" data-edit-count="1">“Post Everlasting” is The American Legion's tribute to members who have passed away. It stands for the lasting legacy of veterans whose service, sacrifice and dedication to our country and community live on in the hearts of their fellow Legionnaires, their loved ones and the town they served.</p>
       </div>
       <div class="notice notice--gold">
-        <h3>Our annual remembrance</h3>
-        <p>Each Memorial Day, Post 432 holds a Post Everlasting ceremony to honor our departed comrades. Everyone is welcome to join us.</p>
-        <p class="small">To let us know of a member's passing, please <a href="contact.html">contact the Post</a> or call (805) 927-5010. For help with burial benefits and military funeral honors, see <a href="resources.html#burial">Veteran Resources</a>.</p>
+        <h3 data-edit="s2.box_1.heading">Our annual remembrance</h3>
+        <p data-edit="s2.box_1.text" data-edit-type="rich" data-edit-count="1">Each Memorial Day, Post 432 holds a Post Everlasting ceremony to honor our departed comrades. Everyone is welcome to join us.</p>
+        <p class="small" data-edit="s2.box_1.text_2" data-edit-type="rich" data-edit-count="1">To let us know of a member's passing, please <a href="contact.html">contact the Post</a> or call (805) 927-5010. For help with burial benefits and military funeral honors, see <a href="resources.html#burial">Veteran Resources</a>.</p>
       </div>
     </div>
   </section>
 
   <section class="section section--white">
     <div class="wrap">
-      <div class="section-head"><div><h2>Our departed comrades</h2><p class="muted" data-pe-count aria-live="polite">Names from 2005 to the present</p></div></div>
+      <div class="section-head"><div><h2 data-edit="s3.heading">Our departed comrades</h2><p class="muted" data-pe-count aria-live="polite">Names from 2005 to the present</p></div></div>
       <label class="visually-hidden" for="pe-search">Search by name</label>
       <div class="search-field">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
@@ -217,6 +230,7 @@
         <li><a href="post-everlasting.html">Post Everlasting</a></li>
         <li><a href="sal.html">Sons of The American Legion</a></li>
         <li><a href="auxiliary.html">Auxiliary</a></li>
+        <li><a href="news.html">News &amp; Photos</a></li>
         <li><a href="bugle.html">The Bugle</a></li>
         <li><a href="resources.html">Veteran Resources</a></li>
       </ul>
@@ -225,7 +239,7 @@
   <div class="footer-bottom">
     <div class="wrap">
       <p>© <span data-year>2026</span> American Legion Post 432, Cambria, California · Tax ID 95-6196709</p>
-      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/">Website editor login</a></p>
+      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/" data-edit-page>Edit this page</a></p>
     </div>
   </div>
 </footer>

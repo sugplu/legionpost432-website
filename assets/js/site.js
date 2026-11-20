@@ -476,6 +476,254 @@
     });
   }
 
+  /* ---------- News & photos (content/news.json) ---------- */
+  function slug(s) { return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60); }
+  function storyId(st) { return "story-" + (validDate(st.date) ? st.date.slice(0, 10) + "-" : "") + slug(st.title); }
+  function storyDate(st) { return validDate(st.date) ? fmt(st.date.slice(0, 10), { month: "long", day: "numeric", year: "numeric" }) : ""; }
+  function photoList(list) { return (Array.isArray(list) ? list : list ? [list] : []).map(safeUrl).filter(Boolean); }
+  function markTall(img) {
+    function check() { if (img.naturalHeight > img.naturalWidth * 1.15 && img.parentNode) img.parentNode.classList.add("tall"); }
+    if (img.complete) check(); else img.addEventListener("load", check);
+  }
+  function renderNews(data) {
+    var stories = ((data && data.stories) || []).filter(function (st) { return st && st.title; })
+      .sort(function (a, b) { return String(b.date || "") > String(a.date || "") ? 1 : -1; });
+    $$('[data-render="news-latest"]').forEach(function (box) {
+      var items = stories.slice(0, parseInt(box.getAttribute("data-limit"), 10) || 3);
+      if (!items.length) { var sec = box.closest("[data-hide-if-empty]"); if (sec) sec.hidden = true; return; }
+      box.innerHTML = "";
+      items.forEach(function (st) {
+        var excerpt = squash(parseRich(st.story).textContent);
+        if (excerpt.length > 160) excerpt = excerpt.slice(0, 155).replace(/\s+\S*$/, "") + "…";
+        var src = safeUrl(st.photo);
+        box.appendChild(el("a", { class: "card", href: "news.html#" + storyId(st) }, [
+          src ? el("div", { class: "card__media" }, [el("img", { src: src, alt: st.photo_alt || "", loading: "lazy", decoding: "async" })]) : null,
+          el("div", { class: "card__body" }, [
+            el("span", { class: "card__kicker", text: storyDate(st) }),
+            el("h3", { text: st.title }),
+            excerpt ? el("p", { text: excerpt }) : null,
+            el("span", { class: "card__more", text: "Read more →" })
+          ])
+        ]));
+      });
+    });
+    $$('[data-render="news-list"]').forEach(function (box) {
+      box.innerHTML = "";
+      if (!stories.length) { box.appendChild(el("p", { class: "muted", text: "News will be posted here." })); return; }
+      stories.forEach(function (st) {
+        var src = safeUrl(st.photo), more = photoList(st.more_photos);
+        var gallery = null;
+        if (more.length) {
+          gallery = el("ul", { class: "gallery story__gallery" });
+          more.forEach(function (m) {
+            var img = el("img", { src: m, alt: "", loading: "lazy", decoding: "async" });
+            gallery.appendChild(el("li", null, [img])); markTall(img);
+          });
+        }
+        var text = el("div", { class: "story__text prose" }); text.appendChild(parseRich(st.story));
+        box.appendChild(el("article", { class: "story", id: storyId(st) }, [
+          el("p", { class: "story__date", text: storyDate(st) }),
+          el("h2", { text: st.title }),
+          src ? el("figure", { class: "story__photo" }, [el("img", { src: src, alt: st.photo_alt || "", loading: "lazy", decoding: "async" })]) : null,
+          text, gallery
+        ]));
+      });
+      if (location.hash) { var target = document.getElementById(location.hash.slice(1)); if (target) target.scrollIntoView(); }
+    });
+  }
+
+  /* ---------- page words and photos from the website editor (content/pages/<page>.json) ---------- */
+  // Each piece of wording is tagged in the HTML: data-edit="s3.heading" (plain words), data-edit-type="inline"
+  // (words with bold/italic/links), data-edit-type="rich" + data-edit-count="N" (the next N paragraphs or lists),
+  // data-edit-img="s3.photo" (a photo) and data-edit-list="s5.questions" (questions, photo galleries, milestones).
+  // The editor saves the words in content/pages/<page>.json, and this code puts them on the page.
+  // Formatted text is cleaned first, so only simple formatting (bold, italic, links, lists, headings, tables) gets through.
+  var ALLOWED = { P: 1, BR: 1, STRONG: 1, B: 1, EM: 1, I: 1, U: 1, S: 1, A: 1, UL: 1, OL: 1, LI: 1, H2: 1, H3: 1, H4: 1,
+    BLOCKQUOTE: 1, HR: 1, IMG: 1, TABLE: 1, THEAD: 1, TBODY: 1, TR: 1, TH: 1, TD: 1 };
+  var INLINE = { BR: 1, STRONG: 1, B: 1, EM: 1, I: 1, U: 1, S: 1, A: 1 };
+  var BLOCKS = { P: 1, UL: 1, OL: 1, H2: 1, H3: 1, H4: 1, BLOCKQUOTE: 1, HR: 1, TABLE: 1 };
+  var DROP = { SCRIPT: 1, STYLE: 1, IFRAME: 1, OBJECT: 1, EMBED: 1, TEMPLATE: 1, SVG: 1, FORM: 1, INPUT: 1, BUTTON: 1, TEXTAREA: 1, SELECT: 1, NOSCRIPT: 1 };
+  function squash(t) { return String(t || "").replace(/\s+/g, " ").trim(); }
+  function cleanInto(target, nodes, allowed) {
+    Array.prototype.forEach.call(nodes, function (n) {
+      if (n.nodeType === 3) { target.appendChild(document.createTextNode(n.nodeValue.replace(/\s+/g, " "))); return; }
+      if (n.nodeType !== 1) return;
+      var tag = n.tagName.toUpperCase();
+      if (tag === "H1") tag = "H2"; else if (tag === "H5" || tag === "H6") tag = "H4";
+      if (DROP[tag]) return;
+      if (!allowed[tag]) {
+        cleanInto(target, n.childNodes, allowed);
+        if (allowed === INLINE && BLOCKS[tag] && n.nextElementSibling) target.appendChild(document.createElement("br"));
+        return;
+      }
+      var out = document.createElement(tag);
+      if (tag === "A") {
+        var href = safeUrl(n.getAttribute("href"));
+        if (!href) { cleanInto(target, n.childNodes, allowed); return; }
+        out.setAttribute("href", href);
+        if (/^https?:/i.test(href)) out.setAttribute("rel", "noopener");
+      } else if (tag === "IMG") {
+        var src = safeUrl(n.getAttribute("src"));
+        if (!src) return;
+        out.setAttribute("src", src); out.setAttribute("alt", n.getAttribute("alt") || ""); out.setAttribute("loading", "lazy");
+      } else if (tag === "TD" || tag === "TH") {
+        ["colspan", "rowspan"].forEach(function (a) { if (n.getAttribute(a)) out.setAttribute(a, n.getAttribute(a)); });
+      }
+      cleanInto(out, n.childNodes, allowed);
+      target.appendChild(out);
+    });
+    return target;
+  }
+  function tidy(frag) {
+    // the editor puts list items inside paragraphs: <li><p>…</p></li>
+    $$("li > p", frag).forEach(function (p) {
+      var next = p.nextElementSibling;
+      while (p.firstChild) p.parentNode.insertBefore(p.firstChild, p);
+      if (next && next.tagName === "P") p.parentNode.insertBefore(document.createElement("br"), p);
+      p.parentNode.removeChild(p);
+    });
+    $$("p", frag).forEach(function (p) { if (!squash(p.textContent) && !$("img", p)) p.parentNode.removeChild(p); });
+    return frag;
+  }
+  function parseHTML(html) {
+    return new DOMParser().parseFromString("<body>" + String(html == null ? "" : html), "text/html").body.childNodes;
+  }
+  function parseRich(html) {
+    var frag = tidy(cleanInto(document.createDocumentFragment(), parseHTML(html), ALLOWED));
+    // loose words at the top level go into a paragraph
+    var loose = null;
+    Array.prototype.slice.call(frag.childNodes).forEach(function (c) {
+      if (c.nodeType === 1 && BLOCKS[c.tagName]) { loose = null; return; }
+      if (c.nodeType === 3 && !c.nodeValue.trim()) { frag.removeChild(c); return; }
+      if (!loose) { loose = document.createElement("p"); frag.insertBefore(loose, c); }
+      loose.appendChild(c);
+    });
+    return frag;
+  }
+  function parseInline(html) {
+    var frag = cleanInto(document.createDocumentFragment(), parseHTML(html), INLINE);
+    while (frag.lastChild && (frag.lastChild.nodeName === "BR" || (frag.lastChild.nodeType === 3 && !frag.lastChild.nodeValue.trim()))) frag.removeChild(frag.lastChild);
+    return frag;
+  }
+  function sig(frag) {
+    var d = document.createElement("div"); d.appendChild(frag.cloneNode(true));
+    return d.innerHTML.replace(/\s+/g, " ").replace(/\s*(<[^>]+>)\s*/g, "$1").trim();
+  }
+  function pick(obj, path) {
+    return path.split(".").reduce(function (o, k) { return o && typeof o === "object" ? o[k] : undefined; }, obj);
+  }
+  function setText(node, val) {
+    val = squash(val);
+    if (!val) { node.hidden = true; return; }
+    if (squash(node.textContent) === val) return;
+    var texts = Array.prototype.filter.call(node.childNodes, function (c) { return c.nodeType === 3 && c.nodeValue.trim(); });
+    if (node.children.length && texts.length) { texts[0].nodeValue = val; texts.slice(1).forEach(function (t) { t.nodeValue = ""; }); }
+    else node.textContent = val;
+  }
+  function setInline(node, val) {
+    var frag = parseInline(val);
+    if (!squash(frag.textContent)) { node.hidden = true; return; }
+    if (sig(frag) === sig(parseInline(node.innerHTML))) return;
+    node.innerHTML = ""; node.appendChild(frag);
+  }
+  function setRich(first, val) {
+    var olds = [first], x = first, n = parseInt(first.getAttribute("data-edit-count"), 10) || 1;
+    while (olds.length < n && (x = x.nextElementSibling)) olds.push(x);
+    var frag = parseRich(val);
+    if (!squash(frag.textContent) && !$("img", frag)) { olds.forEach(function (o) { o.hidden = true; }); return; }
+    var now = document.createDocumentFragment();
+    olds.forEach(function (o) { cleanInto(now, [o], ALLOWED); });
+    if (sig(frag) === sig(tidy(now))) return;
+    var like = {};
+    olds.forEach(function (o) { if (!like[o.tagName]) like[o.tagName] = o; });
+    Array.prototype.slice.call(frag.childNodes).forEach(function (c) {
+      var o = c.nodeType === 1 && like[c.tagName];
+      if (o) { if (o.className) c.className = o.className; if (o.getAttribute("style")) c.setAttribute("style", o.getAttribute("style")); }
+      first.parentNode.insertBefore(c, first);
+    });
+    olds.forEach(function (o) { o.parentNode.removeChild(o); });
+  }
+  function setImg(img, val, alt) {
+    var src = safeUrl(val);
+    if (!src) { (img.closest("figure") || img).hidden = true; return; }
+    if (src !== img.getAttribute("src")) {
+      img.removeAttribute("srcset"); img.style.objectPosition = ""; img.setAttribute("src", src);
+    }
+    if (typeof alt === "string" && alt !== img.getAttribute("alt")) img.setAttribute("alt", alt);
+  }
+  function setList(box, kind, items) {
+    items = (items || []).filter(function (it) { return it && typeof it === "object"; });
+    var have, want, build;
+    if (kind === "faq") {
+      items = items.filter(function (it) { return squash(it.question); });
+      have = $$(":scope > details", box).map(function (d) {
+        var s = $("summary", d), rest = document.createDocumentFragment();
+        Array.prototype.forEach.call(d.childNodes, function (c) { if (c !== s) cleanInto(rest, [c], ALLOWED); });
+        return squash(s && s.textContent) + "|" + sig(tidy(rest));
+      }).join("||");
+      want = items.map(function (it) { return squash(it.question) + "|" + sig(parseRich(it.answer)); }).join("||");
+      build = function (it) {
+        var answer = el("div"); answer.appendChild(parseRich(it.answer));
+        return el("details", null, [el("summary", { text: squash(it.question) }), answer]);
+      };
+    } else if (kind === "gallery") {
+      items = items.filter(function (it) { return safeUrl(it.photo); });
+      have = $$("img", box).map(function (i) { return i.getAttribute("src") + "|" + i.getAttribute("alt"); }).join("||");
+      want = items.map(function (it) { return safeUrl(it.photo) + "|" + (it.description || ""); }).join("||");
+      build = function (it) {
+        var img = el("img", { src: safeUrl(it.photo), alt: it.description || "", loading: "lazy", decoding: "async" });
+        var li = el("li", null, [img]); markTall(img); return li;
+      };
+    } else if (kind === "timeline") {
+      items = items.filter(function (it) { return squash(it.text); });
+      have = $$(":scope > li", box).map(function (li) {
+        var y = $(".year", li); return squash(y && y.textContent) + "|" + squash(li.textContent.slice(y ? y.textContent.length : 0));
+      }).join("||");
+      want = items.map(function (it) { return squash(it.year) + "|" + squash(it.text); }).join("||");
+      build = function (it) { return el("li", null, [el("span", { class: "year", text: squash(it.year) }), squash(it.text)]); };
+    } else return;
+    if (have === want) return;
+    box.innerHTML = "";
+    items.forEach(function (it) { box.appendChild(build(it)); });
+    if (!items.length) box.hidden = true;
+  }
+  function applyPageEdits(data) {
+    if (!data) return;
+    $$("[data-edit]").forEach(function (node) {
+      var val = pick(data, node.getAttribute("data-edit"));
+      if (val === undefined) return;            // not in the file: leave the page as it is
+      var type = node.getAttribute("data-edit-type");
+      try {
+        if (type === "rich") setRich(node, val);
+        else if (type === "inline") setInline(node, val);
+        else setText(node, val);
+      } catch (e) { if (window.console) console.warn("Could not update", node, e); }
+    });
+    $$("[data-edit-img]").forEach(function (img) {
+      var key = img.getAttribute("data-edit-img"), val = pick(data, key);
+      if (val !== undefined) setImg(img, val, pick(data, key + "_alt"));
+    });
+    $$("[data-edit-list]").forEach(function (box) {
+      var val = pick(data, box.getAttribute("data-edit-list"));
+      if (Array.isArray(val)) setList(box, box.getAttribute("data-edit-type"), val);
+    });
+  }
+  function pageName() {
+    var f = location.pathname.split("/").pop();
+    return f ? f.replace(/\.html?$/, "") : "index";
+  }
+  function editsDone() { document.documentElement.classList.remove("edits-pending"); }
+
+  /* ---------- "Edit this page" link in the footer ---------- */
+  // If the website moves to a different GitHub account, change the address below.
+  var EDITOR = "https://app.pagescms.org/sugplu/legionpost432-website/main";
+  var EDIT_FORM = { news: "news", bugle: "bugle", "post-everlasting": "everlasting" };
+  function initEditLink(page, hasForm) {
+    $$("[data-edit-page]").forEach(function (a) {
+      a.setAttribute("href", EDITOR + (EDIT_FORM[page] ? "/file/" + EDIT_FORM[page] : hasForm ? "/file/page-" + page : ""));
+    });
+  }
+
   /* ---------- preview notice (only on the <account>.github.io test address) ---------- */
   // Shows a "not live yet" strip and asks search engines not to list the preview.
   // On www.legionpost432.com this does nothing, so there is nothing to remove at launch.
@@ -500,6 +748,10 @@
     initBrick();
     $$("[data-year]").forEach(function (n) { n.textContent = String(new Date().getFullYear()); });
 
+    var page = pageName(), editable = !!$("[data-edit], [data-edit-img], [data-edit-list]");
+    initEditLink(page, editable);
+    if (editable) getJSON("pages/" + page).then(applyPageEdits).then(editsDone, editsDone); else editsDone();
+    if ($('[data-render^="news"]')) getJSON("news").then(renderNews);
     getJSON("settings").then(function (s) { renderAnnouncement(s); initContactForm(s); });
     if ($('[data-render="upcoming"], [data-render="week"], [data-render="featured"], [data-next]')) getJSON("events").then(renderEvents);
     if ($("[data-officers]")) getJSON("officers").then(renderOfficers);

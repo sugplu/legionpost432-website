@@ -16,6 +16,7 @@
 <link rel="preload" href="assets/fonts/librecaslontext-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script>document.documentElement.classList.add("edits-pending");setTimeout(function(){document.documentElement.classList.remove("edits-pending")},1500);</script>
 <noscript><style>@media (max-width:1139px){.mobile-menu[hidden]{display:block}.menu-button{display:none}}</style></noscript>
 <meta property="og:site_name" content="American Legion Post 432 · Cambria, California">
 <meta property="og:type" content="website">
@@ -82,7 +83,13 @@
             <li><a href="auxiliary.html">American Legion Auxiliary<span>Unit 432</span></a></li>
           </ul>
         </li>
-        <li><a class="nav__link" href="bugle.html">The Bugle</a></li>
+        <li>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-news">News <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="nav__menu" id="menu-news" hidden>
+            <li><a href="news.html">News &amp; Photos<span>Stories and pictures from the Post</span></a></li>
+            <li><a href="bugle.html">The Bugle<span>Our monthly newsletter</span></a></li>
+          </ul>
+        </li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li class="nav__cta"><a class="btn btn--primary btn--sm" href="join.html">Join Post 432</a></li>
       </ul>
@@ -122,6 +129,12 @@
         <ul>
           <li><a href="sal.html" aria-current="page">Sons of The American Legion</a></li>
           <li><a href="auxiliary.html">American Legion Auxiliary</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu__group">
+        <p class="mobile-menu__label">News</p>
+        <ul>
+          <li><a href="news.html">News &amp; Photos</a></li>
           <li><a href="bugle.html">The Bugle newsletter</a></li>
         </ul>
       </div>
@@ -139,33 +152,33 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="page-hero__media"><img src="media/images/sal-bbq-pit.jpg" alt="" width="1600" height="1200"></div>
+    <div class="page-hero__media"><img src="media/images/sal-bbq-pit.jpg" alt="" width="1600" height="1200" data-edit-img="s1.photo"></div>
     <div class="wrap">
       <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Legion Family</li><li>Sons of The American Legion</li></ol>
-      <p class="eyebrow">Sons of The American Legion · Squadron 432</p>
-      <h1>Carrying a family legacy forward</h1>
-      <p class="lead">Sons, grandsons and other male descendants of veterans, honoring their families' service by serving Cambria.</p>
+      <p class="eyebrow" data-edit="s1.small_label">Sons of The American Legion · Squadron 432</p>
+      <h1 data-edit="s1.title">Carrying a family legacy forward</h1>
+      <p class="lead" data-edit="s1.intro" data-edit-type="rich" data-edit-count="1">Sons, grandsons and other male descendants of veterans, honoring their families' service by serving Cambria.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap split">
       <div class="prose">
-        <p class="eyebrow">Who we are</p>
-        <h2>Part of the Legion Family since 1932</h2>
-        <p>The Sons of The American Legion (S.A.L.) was created in 1932 as an organization within The American Legion. Together with the Legion and the American Legion Auxiliary, the Sons make up the Legion Family — united in caring for veterans and their families, supporting young people, and teaching the fundamentals of good citizenship.</p>
-        <p>Each squadron shapes its own programs to serve its community. Here in Cambria, that means rolling up our sleeves.</p>
+        <p class="eyebrow" data-edit="s2.small_label">Who we are</p>
+        <h2 data-edit="s2.heading">Part of the Legion Family since 1932</h2>
+        <p data-edit="s2.text" data-edit-type="rich" data-edit-count="2">The Sons of The American Legion (S.A.L.) was created in 1932 as an organization within The American Legion. Together with the Legion and the American Legion Auxiliary, the Sons make up the Legion Family — united in caring for veterans and their families, supporting young people, and teaching the fundamentals of good citizenship.</p>
+        <p data-edit-part="">Each squadron shapes its own programs to serve its community. Here in Cambria, that means rolling up our sleeves.</p>
       </div>
-      <figure class="photo photo--wide"><img src="media/images/sal-grill.jpg" alt="A Squadron member grills rolls on the big outdoor barbecue." width="1600" height="1200" loading="lazy" decoding="async"></figure>
+      <figure class="photo photo--wide"><img src="media/images/sal-grill.jpg" alt="A Squadron member grills rolls on the big outdoor barbecue." width="1600" height="1200" loading="lazy" decoding="async" data-edit-img="s2.photo"></figure>
     </div>
   </section>
 
   <section class="section section--white">
     <div class="wrap split split--flip">
       <div class="prose">
-        <p class="eyebrow">What Squadron 432 does</p>
-        <h2>Quiet, selfless service</h2>
-        <ul class="check-list">
+        <p class="eyebrow" data-edit="s3.small_label">What Squadron 432 does</p>
+        <h2 data-edit="s3.heading">Quiet, selfless service</h2>
+        <ul class="check-list" data-edit="s3.text" data-edit-type="rich" data-edit-count="1">
           <li><strong>Community barbecues</strong> that raise money for local people and organizations in need</li>
           <li><strong>Hanging the American flags on Main Street</strong> for patriotic holidays — and taking them down again</li>
           <li><strong>Free community barbecues</strong> on special occasions, such as after the 9/11 memorial</li>
@@ -174,15 +187,15 @@
           <li><strong>Ongoing support of Post 432</strong>, from the Picnic in the Park to everyday work at the Hall</li>
         </ul>
       </div>
-      <figure class="photo photo--wide"><img src="media/images/sal-award-2008.jpg" alt="Squadron 432 members gather with the Distinguished Service Award in 2008." width="677" height="507" loading="lazy" decoding="async"><figcaption>2008: Squadron 432 receives the Distinguished Service Award</figcaption></figure>
+      <figure class="photo photo--wide"><img src="media/images/sal-award-2008.jpg" alt="Squadron 432 members gather with the Distinguished Service Award in 2008." width="677" height="507" loading="lazy" decoding="async" data-edit-img="s3.photo"><figcaption data-edit="s3.caption">2008: Squadron 432 receives the Distinguished Service Award</figcaption></figure>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
       <div class="notice notice--gold prose" style="max-width:none">
-        <h3>Distinguished Service Award</h3>
-        <p>In September 2008, following the 9/11 memorial and S.A.L.-sponsored community barbecue, state Detachment leaders presented Squadron 432 with the Distinguished Service Award — the highest honor a squadron can receive — in recognition of how quietly and selflessly it serves Cambria's citizens and young people. The informal ceremony took place, fittingly, at the Vets Hall barbecue pit.</p>
+        <h3 data-edit="s4.box_1.heading">Distinguished Service Award</h3>
+        <p data-edit="s4.box_1.text" data-edit-type="rich" data-edit-count="1">In September 2008, following the 9/11 memorial and S.A.L.-sponsored community barbecue, state Detachment leaders presented Squadron 432 with the Distinguished Service Award — the highest honor a squadron can receive — in recognition of how quietly and selflessly it serves Cambria's citizens and young people. The informal ceremony took place, fittingly, at the Vets Hall barbecue pit.</p>
       </div>
     </div>
   </section>
@@ -190,23 +203,23 @@
   <section class="section section--white" id="join">
     <div class="wrap sidebar-layout">
       <div class="prose">
-        <p class="eyebrow">Membership</p>
-        <h2>Who can join</h2>
-        <p>You qualify if you are a male descendant — including a son, stepson or adopted son — of:</p>
-        <ul class="check-list">
+        <p class="eyebrow" data-edit="s5.small_label">Membership</p>
+        <h2 data-edit="s5.heading">Who can join</h2>
+        <p data-edit="s5.text" data-edit-type="rich" data-edit-count="3">You qualify if you are a male descendant — including a son, stepson or adopted son — of:</p>
+        <ul class="check-list" data-edit-part="">
           <li>a member of The American Legion;</li>
           <li>a veteran who served during an eligible period and died while serving; or</li>
           <li>a veteran who served during an eligible period and was later honorably discharged.</li>
         </ul>
-        <p>Dues are <strong>$30 a year</strong>. Mail your application with a check payable to <strong>“SAL Squadron 432”</strong> to P.O. Box 697, Cambria, CA 93428-0697.</p>
-        <p class="small muted">Many men belong to both the Legion and the Sons. Sons who later serve in the military become eligible for the Legion too — they're known as “dual members.”</p>
+        <p data-edit-part="">Dues are <strong>$30 a year</strong>. Mail your application with a check payable to <strong>“SAL Squadron 432”</strong> to P.O. Box 697, Cambria, CA 93428-0697.</p>
+        <p class="small muted" data-edit="s5.text_2" data-edit-type="rich" data-edit-count="1">Many men belong to both the Legion and the Sons. Sons who later serve in the military become eligible for the Legion too — they're known as “dual members.”</p>
       </div>
       <aside class="stack">
-        <a class="btn btn--primary" href="media/docs/sal-membership-application.pdf" target="_blank" rel="noopener" style="width:100%">SAL application (PDF)</a>
+        <a class="btn btn--primary" href="media/docs/sal-membership-application.pdf" target="_blank" rel="noopener" style="width:100%" data-edit="s5.button">SAL application (PDF)</a>
         <div class="card card--plain"><div class="card__body">
-          <span class="card__kicker">Squadron officers</span>
+          <span class="card__kicker" data-edit="s5.box_1.small_label">Squadron officers</span>
           <div data-officers="sal"></div>
-          <p class="small muted" style="margin-top:.75rem">Questions? Call the Post at <a href="tel:+18059275010">(805) 927-5010</a>.</p>
+          <p class="small muted" style="margin-top:.75rem" data-edit="s5.box_1.text" data-edit-type="rich" data-edit-count="1">Questions? Call the Post at <a href="tel:+18059275010">(805) 927-5010</a>.</p>
         </div></div>
       </aside>
     </div>
@@ -255,6 +268,7 @@
         <li><a href="post-everlasting.html">Post Everlasting</a></li>
         <li><a href="sal.html">Sons of The American Legion</a></li>
         <li><a href="auxiliary.html">Auxiliary</a></li>
+        <li><a href="news.html">News &amp; Photos</a></li>
         <li><a href="bugle.html">The Bugle</a></li>
         <li><a href="resources.html">Veteran Resources</a></li>
       </ul>
@@ -263,7 +277,7 @@
   <div class="footer-bottom">
     <div class="wrap">
       <p>© <span data-year>2026</span> American Legion Post 432, Cambria, California · Tax ID 95-6196709</p>
-      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/">Website editor login</a></p>
+      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/" data-edit-page>Edit this page</a></p>
     </div>
   </div>
 </footer>

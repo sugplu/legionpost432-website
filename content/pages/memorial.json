@@ -1,0 +1,25 @@
+{
+  "s1": {
+    "photo": "/media/images/flag-memorial-night.jpg",
+    "photo_alt": "",
+    "small_label": "Cambria Veterans Memorial",
+    "title": "A place to remember, in the heart of town",
+    "intro": "<p>Honoring the service and sacrifice of all our nation's past, present and future military members — with special emphasis on the veterans who call Cambria home.</p>"
+  },
+  "s2": {
+    "small_label": "The memorial",
+    "heading": "Dedicated Memorial Day, 2011",
+    "text": "<p>The Cambria Veterans Memorial was dedicated on Memorial Day, May 30, 2011. The Flag Memorial stands in the parking lot of the Veterans Memorial Hall at 1000 Main Street, where its flags fly over our town day and night.</p><p>The memorial was designed to recognize everyone who has served, and to reflect the character and charm of our community. Each Memorial Day, Post 432 gathers here to honor those who gave their lives in service and to remember our <a href=\"post-everlasting.html\">Post Everlasting</a>.</p>",
+    "photo": "/media/images/flag-memorial-day.jpg",
+    "photo_alt": "The Flag Memorial in daylight, with flags of the service branches around the American flag.",
+    "photo_2": "/media/images/memorial-bricks.jpg",
+    "photo_2_alt": "Engraved memorial bricks with names, branches and years of service."
+  },
+  "s3": {
+    "small_label": "Engraved bricks",
+    "heading": "Secure your place in Cambria's history",
+    "text": "<p>For a donation of <strong>$125 per brick</strong>, you can honor a veteran, a family or a loved one with an engraved brick on the Post's flag monument. You don't have to be a veteran to order one — any individual, business or organization is welcome.</p>",
+    "text_2": "<ol><li><strong>Fill out the order form</strong>Use “Print my order form” above, or the blank PDF. You can order up to three bricks per form.</li><li><strong>Write your check</strong>$125 per brick, payable to “American Legion Post 432.”</li><li><strong>Mail both to</strong>Paver Project, American Legion Post 432, P.O. Box 697, Cambria, CA 93428-0697</li></ol>",
+    "text_3": "<p>Your contribution may be tax-deductible; please consult your tax advisor. American Legion Post 432 reserves the right to decline brick inscriptions that do not reflect the spirit of the memorial. Questions? Call <a href=\"tel:+18059275010\">(805) 927-5010</a> or <a href=\"contact.html\">send us a message</a>.</p>"
+  }
+}

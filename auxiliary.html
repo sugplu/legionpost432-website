@@ -16,6 +16,7 @@
 <link rel="preload" href="assets/fonts/librecaslontext-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script>document.documentElement.classList.add("edits-pending");setTimeout(function(){document.documentElement.classList.remove("edits-pending")},1500);</script>
 <noscript><style>@media (max-width:1139px){.mobile-menu[hidden]{display:block}.menu-button{display:none}}</style></noscript>
 <meta property="og:site_name" content="American Legion Post 432 · Cambria, California">
 <meta property="og:type" content="website">
@@ -82,7 +83,13 @@
             <li><a href="auxiliary.html" aria-current="page">American Legion Auxiliary<span>Unit 432</span></a></li>
           </ul>
         </li>
-        <li><a class="nav__link" href="bugle.html">The Bugle</a></li>
+        <li>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-news">News <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="nav__menu" id="menu-news" hidden>
+            <li><a href="news.html">News &amp; Photos<span>Stories and pictures from the Post</span></a></li>
+            <li><a href="bugle.html">The Bugle<span>Our monthly newsletter</span></a></li>
+          </ul>
+        </li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
         <li class="nav__cta"><a class="btn btn--primary btn--sm" href="join.html">Join Post 432</a></li>
       </ul>
@@ -122,6 +129,12 @@
         <ul>
           <li><a href="sal.html">Sons of The American Legion</a></li>
           <li><a href="auxiliary.html" aria-current="page">American Legion Auxiliary</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu__group">
+        <p class="mobile-menu__label">News</p>
+        <ul>
+          <li><a href="news.html">News &amp; Photos</a></li>
           <li><a href="bugle.html">The Bugle newsletter</a></li>
         </ul>
       </div>
@@ -139,42 +152,42 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="page-hero__media"><img src="media/images/auxiliary-volunteers.jpg" alt="" width="1600" height="932"></div>
+    <div class="page-hero__media"><img src="media/images/auxiliary-volunteers.jpg" alt="" width="1600" height="932" data-edit-img="s1.photo"></div>
     <div class="wrap">
       <ol class="breadcrumb"><li><a href="index.html">Home</a></li><li>Legion Family</li><li>American Legion Auxiliary</li></ol>
-      <p class="eyebrow">American Legion Auxiliary · Unit 432</p>
-      <h1>Service, Not Self</h1>
-      <p class="lead">Supporting The American Legion and honoring those who have served, by strengthening the lives of veterans, military members and their families — at home and abroad.</p>
+      <p class="eyebrow" data-edit="s1.small_label">American Legion Auxiliary · Unit 432</p>
+      <h1 data-edit="s1.title">Service, Not Self</h1>
+      <p class="lead" data-edit="s1.intro" data-edit-type="rich" data-edit-count="1">Supporting The American Legion and honoring those who have served, by strengthening the lives of veterans, military members and their families — at home and abroad.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap split">
       <div class="prose">
-        <p class="eyebrow">Our mission</p>
-        <h2>For God and Country</h2>
-        <p>We advocate for veterans, educate our community, mentor young people, and promote patriotism, good citizenship, peace and security. Through service, fellowship and compassion, we try to make a real difference for the people who have given so much for our freedom.</p>
-        <p>As one of the nation's largest patriotic service organizations, the American Legion Auxiliary has shown for more than a century what volunteers can do. Here in Cambria, Unit 432 does it one dinner, one Bingo card and one helping hand at a time.</p>
+        <p class="eyebrow" data-edit="s2.small_label">Our mission</p>
+        <h2 data-edit="s2.heading">For God and Country</h2>
+        <p data-edit="s2.text" data-edit-type="rich" data-edit-count="2">We advocate for veterans, educate our community, mentor young people, and promote patriotism, good citizenship, peace and security. Through service, fellowship and compassion, we try to make a real difference for the people who have given so much for our freedom.</p>
+        <p data-edit-part="">As one of the nation's largest patriotic service organizations, the American Legion Auxiliary has shown for more than a century what volunteers can do. Here in Cambria, Unit 432 does it one dinner, one Bingo card and one helping hand at a time.</p>
       </div>
-      <figure class="photo photo--wide"><img src="media/images/auxiliary-parade-team.jpg" alt="Unit 432 members in red, wearing Statue of Liberty crowns, stand beside their flag-decorated parade car." width="640" height="336" loading="lazy" decoding="async"><figcaption>Unit 432 on parade</figcaption></figure>
+      <figure class="photo photo--wide"><img src="media/images/auxiliary-parade-team.jpg" alt="Unit 432 members in red, wearing Statue of Liberty crowns, stand beside their flag-decorated parade car." width="640" height="336" loading="lazy" decoding="async" data-edit-img="s2.photo"><figcaption data-edit="s2.caption">Unit 432 on parade</figcaption></figure>
     </div>
   </section>
 
   <section class="section section--white">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">In Cambria</p><h2>What Unit 432 does</h2></div><a class="btn btn--outline" href="events.html">See the calendar</a></div>
+      <div class="section-head"><div><p class="eyebrow" data-edit="s3.small_label">In Cambria</p><h2 data-edit="s3.heading">What Unit 432 does</h2></div><a class="btn btn--outline" href="events.html" data-edit="s3.button">See the calendar</a></div>
       <div class="grid grid--3">
-        <div class="card"><div class="card__media"><img src="media/images/club-kitchen.jpg" alt="Volunteers in the Legion kitchen." width="1600" height="1200" loading="lazy" decoding="async"></div><div class="card__body"><span class="card__kicker">Every Thursday · 5 PM</span><h3>Thursday night dinners</h3><p>A home-cooked meal with a new menu every week, $12. Tickets go on sale at 5 PM — first come, first served.</p></div></div>
-        <div class="card"><div class="card__media"><img src="media/images/auxiliary-bingo-car.jpg" alt="The Auxiliary's flag-covered car advertising monthly Bingo." width="1600" height="1135" loading="lazy" decoding="async"></div><div class="card__body"><span class="card__kicker">2nd Wednesday monthly</span><h3>Bingo night</h3><p>Doors open at 5 PM and games start at 6 PM. Everyone is welcome.</p></div></div>
-        <div class="card"><div class="card__media"><img src="media/images/poppies.jpg" alt="A jar of donations surrounded by red memorial poppies." width="566" height="375" loading="lazy" decoding="async"></div><div class="card__body"><span class="card__kicker">Around Memorial Day</span><h3>Poppy program</h3><p>Our oldest tradition: red poppies in remembrance of those who served, with donations supporting veterans and their families.</p></div></div>
+        <div class="card"><div class="card__media"><img src="media/images/club-kitchen.jpg" alt="Volunteers in the Legion kitchen." width="1600" height="1200" loading="lazy" decoding="async" data-edit-img="s3.box_1.photo"></div><div class="card__body"><span class="card__kicker" data-edit="s3.box_1.small_label">Every Thursday · 5 PM</span><h3 data-edit="s3.box_1.heading">Thursday night dinners</h3><p data-edit="s3.box_1.text" data-edit-type="rich" data-edit-count="1">A home-cooked meal with a new menu every week, $12. Tickets go on sale at 5 PM — first come, first served.</p></div></div>
+        <div class="card"><div class="card__media"><img src="media/images/auxiliary-bingo-car.jpg" alt="The Auxiliary's flag-covered car advertising monthly Bingo." width="1600" height="1135" loading="lazy" decoding="async" data-edit-img="s3.box_2.photo"></div><div class="card__body"><span class="card__kicker" data-edit="s3.box_2.small_label">2nd Wednesday monthly</span><h3 data-edit="s3.box_2.heading">Bingo night</h3><p data-edit="s3.box_2.text" data-edit-type="rich" data-edit-count="1">Doors open at 5 PM and games start at 6 PM. Everyone is welcome.</p></div></div>
+        <div class="card"><div class="card__media"><img src="media/images/poppies.jpg" alt="A jar of donations surrounded by red memorial poppies." width="566" height="375" loading="lazy" decoding="async" data-edit-img="s3.box_3.photo"></div><div class="card__body"><span class="card__kicker" data-edit="s3.box_3.small_label">Around Memorial Day</span><h3 data-edit="s3.box_3.heading">Poppy program</h3><p data-edit="s3.box_3.text" data-edit-type="rich" data-edit-count="1">Our oldest tradition: red poppies in remembrance of those who served, with donations supporting veterans and their families.</p></div></div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">National programs</p><h2>How the Auxiliary serves</h2></div></div>
-      <div class="faq">
+      <div class="section-head"><div><p class="eyebrow" data-edit="s4.small_label">National programs</p><h2 data-edit="s4.heading">How the Auxiliary serves</h2></div></div>
+      <div class="faq" data-edit-list="s4.questions" data-edit-type="faq">
         <details><summary>Veterans Affairs &amp; Rehabilitation</summary><div><p>Assistance, advocacy and volunteer service for veterans and their families — from visiting hospitalized veterans to connecting families with resources — so those who served are never forgotten.</p></div></details>
         <details><summary>Children &amp; Youth</summary><div><p>Programs that support the physical, emotional, educational and spiritual needs of young people, and help create safe, supportive places for children to thrive.</p></div></details>
         <details><summary>Girls State &amp; Girls Nation</summary><div><p>Premier leadership and civics programs where young women experience government in action. Since 1937, Girls State has introduced generations of young women to responsible citizenship.</p></div></details>
@@ -189,15 +202,15 @@
   <section class="section section--white">
     <div class="wrap sidebar-layout">
       <div>
-        <p class="eyebrow">Leadership</p>
-        <h2>Unit 432 officers</h2>
+        <p class="eyebrow" data-edit="s5.small_label">Leadership</p>
+        <h2 data-edit="s5.heading">Unit 432 officers</h2>
         <div data-officers="auxiliary"></div>
       </div>
       <aside class="callout">
-        <p class="eyebrow">Join us</p>
-        <h3>Become a member</h3>
-        <p>Membership is open to family members of veterans eligible for The American Legion. Not sure if you qualify? Just ask.</p>
-        <div class="btn-row"><a class="btn btn--primary" href="media/docs/auxiliary-membership-application.pdf" target="_blank" rel="noopener">Application (PDF)</a><a class="btn btn--light" href="contact.html">Ask a question</a></div>
+        <p class="eyebrow" data-edit="s5.box_1.small_label">Join us</p>
+        <h3 data-edit="s5.box_1.heading">Become a member</h3>
+        <p data-edit="s5.box_1.text" data-edit-type="rich" data-edit-count="1">Membership is open to family members of veterans eligible for The American Legion. Not sure if you qualify? Just ask.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="media/docs/auxiliary-membership-application.pdf" target="_blank" rel="noopener" data-edit="s5.box_1.button">Application (PDF)</a><a class="btn btn--light" href="contact.html" data-edit="s5.box_1.button_2">Ask a question</a></div>
       </aside>
     </div>
   </section>
@@ -245,6 +258,7 @@
         <li><a href="post-everlasting.html">Post Everlasting</a></li>
         <li><a href="sal.html">Sons of The American Legion</a></li>
         <li><a href="auxiliary.html">Auxiliary</a></li>
+        <li><a href="news.html">News &amp; Photos</a></li>
         <li><a href="bugle.html">The Bugle</a></li>
         <li><a href="resources.html">Veteran Resources</a></li>
       </ul>
@@ -253,7 +267,7 @@
   <div class="footer-bottom">
     <div class="wrap">
       <p>© <span data-year>2026</span> American Legion Post 432, Cambria, California · Tax ID 95-6196709</p>
-      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/">Website editor login</a></p>
+      <p>The American Legion name and emblem are registered marks of The American Legion. · <a href="https://app.pagescms.org/" data-edit-page>Edit this page</a></p>
     </div>
   </div>
 </footer>
