@@ -2,6 +2,17 @@
 # Editors log in at https://app.pagescms.org and see simple forms for each item below.
 # Docs: https://pagescms.org/docs/configuration/
 
+# Each saved change is labeled with what changed and the volunteer's name (not their email),
+# so the history shows who did what.
+settings:
+  commit:
+    identity: app
+    templates:
+      create: "Added {filename} in {name} ({userName})"
+      update: "Updated {name} ({userName})"
+      delete: "Removed {filename} from {name} ({userName})"
+      rename: "Renamed {oldFilename} to {newFilename} ({userName})"
+
 media:
   - name: images
     label: Photos
