@@ -21,7 +21,7 @@
       "weekday": "Saturday",
       "time": "8:00 – 11:00 AM",
       "location": "Legion Dining Room, behind the Vets Hall",
-      "description": "A hearty breakfast and good company — the best way to meet the Legion Family.",
+      "description": "A hearty breakfast and good company. It's the best way to meet the Legion Family.",
       "audience": "Everyone welcome",
       "showOnHome": true,
       "skip": []
@@ -73,7 +73,7 @@
       "weekday": "Thursday",
       "time": "5:00 PM",
       "location": "Legion Dining Room",
-      "description": "A home-cooked dinner from the Auxiliary — the menu changes every week. $12. Tickets go on sale at 5 PM, first come, first served.",
+      "description": "A home-cooked dinner from the Auxiliary. The menu changes every week. $12. Tickets go on sale at 5 PM, first come, first served.",
       "audience": "Members & guests",
       "showOnHome": true,
       "skip": ["2026-11-26"]
@@ -100,7 +100,7 @@
       "endDate": "",
       "time": "Details coming soon",
       "location": "Shamel Park, 5455 Windsor Blvd., Cambria",
-      "summary": "Cambria's Fourth of July tradition returns — an opening ceremony, food, music, games, kids' races and the famous pie eating contest.",
+      "summary": "Cambria's Fourth of July tradition returns: an opening ceremony, food, music, games, kids' races and the famous pie eating contest.",
       "image": "/media/images/picnic-crowd.jpg",
       "imageAlt": "Families gather on the lawn at Shamel Park for the Picnic in the Park.",
       "link": "picnic.html",

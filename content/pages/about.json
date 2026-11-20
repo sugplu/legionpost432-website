@@ -3,7 +3,7 @@
     "photo": "/media/images/picnic-flag-raising.jpg",
     "photo_alt": "",
     "small_label": "About Post 432",
-    "title": "Veterans serving veterans — and Cambria",
+    "title": "Veterans serving veterans and Cambria",
     "intro": "<p>American Legion Post 432 is a community of men and women who honorably served our nation, and who keep on serving: our fellow veterans, today's military families, local young people and the North Coast community.</p>"
   },
   "s2": {
@@ -26,7 +26,7 @@
     "photo_alt": "A Legionnaire stands with two young men wearing medals at the Picnic in the Park.",
     "small_label": "Youth programs",
     "heading": "Investing in the next generation",
-    "text": "<p>Post 432 awards <strong>academic scholarships</strong> to students at Coast Union High School and Leffingwell High School, and sponsors young men for <a href=\"https://www.legion.org/boysnation\">American Legion Boys State and Boys Nation</a> — selective programs where high school students learn how government works by running one. The <a href=\"auxiliary.html\">Auxiliary</a> sponsors young women for Girls State.</p><p>Students, parents and teachers: ask us about this year's scholarship and Boys State applications.</p>",
+    "text": "<p>Post 432 awards <strong>academic scholarships</strong> to students at Coast Union High School and Leffingwell High School, and sponsors young men for <a href=\"https://www.legion.org/boysnation\">American Legion Boys State and Boys Nation</a>, selective programs where high school students learn how government works by running one. The <a href=\"auxiliary.html\">Auxiliary</a> sponsors young women for Girls State.</p><p>Students, parents and teachers: ask us about this year's scholarship and Boys State applications.</p>",
     "button": "Ask about scholarships"
   },
   "s5": {
@@ -38,11 +38,11 @@
     "row_2_name": "Tuesday",
     "row_2_details": "Taco Tuesday, 6–8 PM",
     "row_3_name": "Thursday",
-    "row_3_details": "Auxiliary dinner at 5 PM — $12, new menu every week",
+    "row_3_details": "Auxiliary dinner at 5 PM ($12, new menu every week)",
     "row_4_name": "Friday",
     "row_4_details": "Club open from 5 PM",
     "row_5_name": "3rd Saturday",
-    "row_5_details": "Pancake breakfast, 8–11 AM — everyone welcome",
+    "row_5_details": "Pancake breakfast, 8–11 AM. Everyone welcome",
     "text_2": "<p>Hours can change around holidays. Check the <a href=\"events.html\">calendar</a> or call (805) 927-5010.</p>",
     "photo": "/media/images/club-kitchen.jpg",
     "photo_alt": "Two volunteers smile in the Legion kitchen.",

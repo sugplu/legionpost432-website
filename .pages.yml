@@ -1,4 +1,4 @@
-# Pages CMS configuration — the "website editor" for American Legion Post 432.
+# Pages CMS configuration: the "website editor" for American Legion Post 432.
 # Editors log in at https://app.pagescms.org and see simple forms for each item below.
 # Docs: https://pagescms.org/docs/configuration/
 
@@ -41,7 +41,7 @@ content:
           - name: text
             label: Message
             type: text
-            description: "Keep it short — one or two sentences. Example: No Thursday dinner on Thanksgiving. Happy Thanksgiving!"
+            description: "Keep it short, one or two sentences. Example: No Thursday dinner on Thanksgiving. Happy Thanksgiving!"
           - name: linkText
             label: Link text (optional)
             type: string
@@ -118,7 +118,7 @@ content:
         list:
           collapsible:
             collapsed: true
-            summary: "{fields.date} — {fields.title}"
+            summary: "{fields.date} · {fields.title}"
         fields:
           - name: title
             label: Event name
@@ -516,7 +516,7 @@ content:
                 label: "Heading"
                 type: string
           - name: s6
-            label: "Serving those who served — and the town we love"
+            label: "Serving those who served, and the town we love"
             type: object
             fields:
               - name: small_label
@@ -1438,7 +1438,7 @@ content:
                   switcher: false
                   media: false
           - name: s2
-            label: "The 45th annual Picnic — on America's 250th birthday"
+            label: "The 45th annual Picnic, on America's 250th birthday"
             type: object
             fields:
               - name: small_label
@@ -2558,7 +2558,7 @@ content:
                   switcher: false
                   media: false
           - name: s2
-            label: "Veterans Crisis Line — free, confidential, 24/7"
+            label: "Veterans Crisis Line: free, confidential, 24/7"
             type: object
             fields:
               - name: box_1

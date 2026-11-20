@@ -4,11 +4,11 @@
     "photo_alt": "",
     "small_label": "A Cambria tradition",
     "title": "Fourth of July Picnic in the Park",
-    "intro": "<p>Every Independence Day, Post 432 invites the whole town — neighbors, families and visitors — to Shamel Park to celebrate our country's birthday together.</p>"
+    "intro": "<p>Every Independence Day, Post 432 invites the whole town (neighbors, families and visitors) to Shamel Park to celebrate our country's birthday together.</p>"
   },
   "s2": {
     "small_label": "Thank you, Cambria!",
-    "heading": "The 45th annual Picnic — on America's 250th birthday",
+    "heading": "The 45th annual Picnic, on America's 250th birthday",
     "text": "<p>A heartfelt thank you to our community and our generous sponsors for making the 2026 American Legion Family Picnic in the Park such a great success. Your support, generosity and participation made it a wonderful celebration for everyone.</p><p>We also thank our dedicated volunteers. From planning and setup to serving and cleanup, your hard work did not go unnoticed. We look forward to celebrating with you again next year!</p>",
     "box_1": {
       "text": "<p><strong>Save the date:</strong> the 46th annual Picnic in the Park is <strong>Sunday, July 4, 2027</strong> at Shamel Park. Schedule and volunteer sign-ups will be posted here in the spring.</p>"
@@ -30,11 +30,11 @@
     "row_4_name": "Late afternoon",
     "row_4_details": "Raffle drawings",
     "row_5_name": "5:00 PM",
-    "row_5_details": "Picnic ends — in time to catch fireworks elsewhere",
-    "text_2": "<p><strong>All day:</strong> live DJ, face painting, games, and food and drinks from the Legion — every purchase supports Post 432's programs.</p>",
+    "row_5_details": "Picnic ends, in time to catch fireworks elsewhere",
+    "text_2": "<p><strong>All day:</strong> live DJ, face painting, games, and food and drinks from the Legion. Every purchase supports Post 432's programs.</p>",
     "small_label_2": "Getting there",
     "heading_2": "Shamel Park",
-    "text_3": "<p>5455 Windsor Blvd., Cambria — where Windsor Blvd. meets the ocean.</p><p>Parking is limited, so please carpool or ride the <strong>Cambria trolley</strong>, which runs a Moonstone / Main Street route on the Fourth with no set stops — just wave it down.</p>",
+    "text_3": "<p>5455 Windsor Blvd., Cambria, where Windsor Blvd. meets the ocean.</p><p>Parking is limited, so please carpool or ride the <strong>Cambria trolley</strong>, which runs a Moonstone / Main Street route on the Fourth with no set stops. Just wave it down.</p>",
     "button": "Map to Shamel Park",
     "box_1": {
       "text": "<p><strong>Please, no fireworks and no personal barbecues</strong> in the park.</p>"
@@ -45,7 +45,7 @@
     "heading": "Picnic do's and don'ts",
     "box_1": {
       "heading": "Do",
-      "text": "<ul><li>Bring sunscreen, lawn chairs and layers — it's the Central Coast!</li><li>Carpool or ride the trolley, and park legally</li><li>Join the games and the pie eating contest</li><li>Buy raffle tickets and food on site to support the Legion</li><li>Keep pets on a leash, and take your trash with you</li><li>Volunteer to help — and tell your friends and family</li></ul>"
+      "text": "<ul><li>Bring sunscreen, lawn chairs and layers. It's the Central Coast!</li><li>Carpool or ride the trolley, and park legally</li><li>Join the games and the pie eating contest</li><li>Buy raffle tickets and food on site to support the Legion</li><li>Keep pets on a leash, and take your trash with you</li><li>Volunteer to help, and tell your friends and family</li></ul>"
     },
     "box_2": {
       "heading": "Don't",
@@ -124,7 +124,7 @@
   },
   "s8": {
     "heading": "Many hands make light work",
-    "text": "<p>Setup, serving, games, cleanup — there's a shift for everyone. Let us know you'd like to help next year.</p>",
+    "text": "<p>Setup, serving, games, cleanup: there's a shift for everyone. Let us know you'd like to help next year.</p>",
     "button": "I'd like to volunteer"
   }
 }

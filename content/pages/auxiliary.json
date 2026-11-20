@@ -4,7 +4,7 @@
     "photo_alt": "",
     "small_label": "American Legion Auxiliary · Unit 432",
     "title": "Service, Not Self",
-    "intro": "<p>Supporting The American Legion and honoring those who have served, by strengthening the lives of veterans, military members and their families — at home and abroad.</p>"
+    "intro": "<p>Supporting The American Legion and honoring those who have served, by strengthening the lives of veterans, military members and their families, at home and abroad.</p>"
   },
   "s2": {
     "small_label": "Our mission",
@@ -23,7 +23,7 @@
       "photo_alt": "Volunteers in the Legion kitchen.",
       "small_label": "Every Thursday · 5 PM",
       "heading": "Thursday night dinners",
-      "text": "<p>A home-cooked meal with a new menu every week, $12. Tickets go on sale at 5 PM — first come, first served.</p>"
+      "text": "<p>A home-cooked meal with a new menu every week, $12. Tickets go on sale at 5 PM. First come, first served.</p>"
     },
     "box_2": {
       "photo": "/media/images/auxiliary-bingo-car.jpg",
@@ -46,7 +46,7 @@
     "questions": [
       {
         "question": "Veterans Affairs & Rehabilitation",
-        "answer": "<p>Assistance, advocacy and volunteer service for veterans and their families — from visiting hospitalized veterans to connecting families with resources — so those who served are never forgotten.</p>"
+        "answer": "<p>Assistance, advocacy and volunteer service for veterans and their families, from visiting hospitalized veterans to connecting families with resources, so those who served are never forgotten.</p>"
       },
       {
         "question": "Children & Youth",

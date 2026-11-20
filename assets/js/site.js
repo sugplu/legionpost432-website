@@ -1,10 +1,10 @@
 /* ==========================================================================
-   American Legion Post 432 — site script (plain JavaScript, no libraries)
+   American Legion Post 432: site script (plain JavaScript, no libraries)
 
    Everything volunteers edit lives in /content/*.json (edited through the
    website editor). This file reads those files and draws them on the page.
    Regular events (meetings, breakfasts, bingo, dinners) are calculated from
-   their rule — e.g. "3rd Saturday" — so their dates never need updating.
+   their rule (e.g. "3rd Saturday"), so their dates never need updating.
    ========================================================================== */
 (function () {
   "use strict";
@@ -193,7 +193,7 @@
     body.appendChild(h);
     var when = fmt(ev.date, { weekday: "long", month: "long", day: "numeric" });
     var meta = el("p", { class: "event__meta" }, [el("strong", { text: (ev.date === today ? "Today" : when) + (ev.time ? " · " + ev.time : "") })]);
-    if (ev.location) meta.appendChild(document.createTextNode(" — " + ev.location));
+    if (ev.location) meta.appendChild(document.createTextNode(" · " + ev.location));
     body.appendChild(meta);
     if (ev.description) body.appendChild(el("p", { class: "event__desc", text: ev.description }));
     if (ev.audience) body.appendChild(el("p", { class: "event__desc" }, [el("span", { class: "event__tag event__tag--who", text: ev.audience })]));
@@ -465,8 +465,8 @@
       }).join("");
       var w = window.open("", "_blank");
       if (!w) { window.print(); return; }
-      w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Memorial Brick Order — American Legion Post 432</title><style>body{font:14pt/1.5 Georgia,serif;margin:2.5rem;color:#000}h1{font-size:20pt;margin:0}h2{font-size:13pt;margin:1.5rem 0 .5rem}table{border-collapse:collapse;margin:.5rem 0 1rem}td{width:1.6rem;height:1.9rem;border:1px solid #000;text-align:center;font:bold 14pt monospace}.line{border-bottom:1px solid #000;height:1.9rem;margin:.6rem 0}small{font-size:10pt}</style></head><body>' +
-        '<h1>American Legion Post 432 — Memorial Brick Order</h1><p>Cambria Veterans Memorial · Minimum donation $125 per brick</p>' +
+      w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Memorial Brick Order | American Legion Post 432</title><style>body{font:14pt/1.5 Georgia,serif;margin:2.5rem;color:#000}h1{font-size:20pt;margin:0}h2{font-size:13pt;margin:1.5rem 0 .5rem}table{border-collapse:collapse;margin:.5rem 0 1rem}td{width:1.6rem;height:1.9rem;border:1px solid #000;text-align:center;font:bold 14pt monospace}.line{border-bottom:1px solid #000;height:1.9rem;margin:.6rem 0}small{font-size:10pt}</style></head><body>' +
+        '<h1>American Legion Post 432: Memorial Brick Order</h1><p>Cambria Veterans Memorial · Minimum donation $125 per brick</p>' +
         '<h2>Engraving (3 lines, 16 characters each)</h2><table>' + rows + '</table>' +
         '<h2>Your information</h2><div>Name</div><div class="line"></div><div>Phone</div><div class="line"></div><div>Address</div><div class="line"></div><div>Email</div><div class="line"></div><div>Amount enclosed</div><div class="line"></div>' +
         '<h2>Mail this form with your check</h2><p>Make checks payable to <b>“American Legion Post 432”</b> and mail to:<br>Paver Project, American Legion Post 432<br>P.O. Box 697, Cambria, CA 93428-0697</p>' +

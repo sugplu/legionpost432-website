@@ -4,7 +4,7 @@
     "photo_alt": "",
     "small_label": "Events & Calendar",
     "title": "There's always something going on",
-    "intro": "<p>Pancake breakfasts, Bingo nights, home-cooked dinners, meetings with guest speakers — and the biggest day of our year, the Fourth of July Picnic in the Park.</p>"
+    "intro": "<p>Pancake breakfasts, Bingo nights, home-cooked dinners, meetings with guest speakers, and the biggest day of our year, the Fourth of July Picnic in the Park.</p>"
   },
   "s2": {
     "small_label": "Next few weeks",
@@ -16,7 +16,7 @@
       "button": "Get directions"
     },
     "box_2": {
-      "text": "<p><strong>Who's welcome?</strong> Pancake breakfasts and Bingo are open to everyone. Club nights and dinners are for members and their guests — come as a guest of a member, or <a href=\"join.html\">join us</a>.</p>"
+      "text": "<p><strong>Who's welcome?</strong> Pancake breakfasts and Bingo are open to everyone. Club nights and dinners are for members and their guests. Come as a guest of a member, or <a href=\"join.html\">join us</a>.</p>"
     }
   },
   "s3": {

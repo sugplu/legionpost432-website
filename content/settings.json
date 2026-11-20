@@ -1,7 +1,7 @@
 {
   "announcement": {
     "show": true,
-    "text": "Welcome to our new website — same address, fresh look.",
+    "text": "Welcome to our new website. Same address, fresh look.",
     "linkText": "Tell us what you think",
     "link": "contact.html"
   },

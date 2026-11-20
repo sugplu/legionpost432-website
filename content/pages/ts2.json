@@ -4,12 +4,12 @@
     "photo_alt": "",
     "small_label": "Troop Support Services",
     "title": "Until they all come home",
-    "intro": "<p>Since 2005, Post 432's TS2 team has stood beside service members from Cambria, Cayucos and San Simeon — and the families waiting for them at home.</p>"
+    "intro": "<p>Since 2005, Post 432's TS2 team has stood beside service members from Cambria, Cayucos and San Simeon, and the families waiting for them at home.</p>"
   },
   "s2": {
     "small_label": "What TS2 is",
     "heading": "A bridge between our town and the people serving it",
-    "text": "<p>Cambria American Legion Post 432 created the Troop Support Services unit in 2005, adapting a national American Legion program to support <strong>our own</strong> local service members and their families.</p><p>As veterans, Legionnaires have been there themselves, and our families have been through the same strain. TS2 lets us respond quickly when a family emergency pops up — and be there throughout the year, not just in a crisis. Help can be as simple as mowing a lawn or fixing a leaky faucet, or as serious as covering rent, getting a car running again, or helping a service member get home when both time and money are short.</p><p>Our goal is simple: every local service member should know that Cambria appreciates their sacrifice, is thinking of them, and will be at their side when called upon.</p>",
+    "text": "<p>Cambria American Legion Post 432 created the Troop Support Services unit in 2005, adapting a national American Legion program to support <strong>our own</strong> local service members and their families.</p><p>As veterans, Legionnaires have been there themselves, and our families have been through the same strain. TS2 lets us respond quickly when a family emergency pops up, and be there throughout the year, not just in a crisis. Help can be as simple as mowing a lawn or fixing a leaky faucet, or as serious as covering rent, getting a car running again, or helping a service member get home when both time and money are short.</p><p>Our goal is simple: every local service member should know that Cambria appreciates their sacrifice, is thinking of them, and will be at their side when called upon.</p>",
     "photo": "/media/images/ts2-main-street-board.jpg",
     "photo_alt": "The American Legion “God Bless Our Service Members” board on Main Street, listing local service members by branch.",
     "caption": "The TS2 board on Main Street honors local service members"
@@ -36,7 +36,7 @@
   },
   "s4": {
     "heading": "For service members",
-    "text": "<ul><li>Welcome-home banners over the Veterans Memorial Hall</li><li>A challenge coin for each returning service member</li><li>Dinner gift certificates from local restaurants</li><li>A place on the Main Street TS2 board</li><li>Operation Holiday Package — over 1,000 boxes, 59 large containers and hundreds of letters</li><li>Cambria Girl Scout cookies and 4-H beef jerky for those deployed</li><li>Membership in The American Legion</li></ul>",
+    "text": "<ul><li>Welcome-home banners over the Veterans Memorial Hall</li><li>A challenge coin for each returning service member</li><li>Dinner gift certificates from local restaurants</li><li>A place on the Main Street TS2 board</li><li>Operation Holiday Package: over 1,000 boxes, 59 large containers and hundreds of letters</li><li>Cambria Girl Scout cookies and 4-H beef jerky for those deployed</li><li>Membership in The American Legion</li></ul>",
     "heading_2": "For their families",
     "text_2": "<ul><li>Plane tickets and gas cards when they're needed most</li><li>Help with medical, utility and food bills</li><li>Lodging and home repairs during emergencies</li><li>Wedding and baby shower gifts, and holiday presents for younger siblings</li><li>Laptops and other ways to stay in touch</li><li>An annual Troop Support dinner for all military families</li></ul>"
   },
@@ -44,14 +44,14 @@
     "box_1": {
       "small_label": "Is someone in your family serving?",
       "heading": "Tell us about them",
-      "text": "<p>If you have a loved one from Cambria, Cayucos or San Simeon on active duty, let us know. We'll add them to the Main Street board and make sure your family knows TS2 is here for you — around the clock.</p>",
+      "text": "<p>If you have a loved one from Cambria, Cayucos or San Simeon on active duty, let us know. We'll add them to the Main Street board and make sure your family knows TS2 is here for you, around the clock.</p>",
       "button": "Contact TS2"
     },
     "box_2": {
       "small_label": "How you can help",
       "heading": "Give to TS2",
       "text": "<p>Every donation goes into a fund set aside only for TS2. Make your check payable to <strong>“American Legion Post 432”</strong>, write <strong>“TS2”</strong> in the memo line, and mail it to:</p><p><strong>American Legion Post 432</strong><br>P.O. Box 697<br>Cambria, CA 93428-0697</p>",
-      "text_2": "<p>Cards and letters for our service members can be sent to the same address — we'll forward them. TS2 is coordinated by David Pierson; reach him through the Post.</p>"
+      "text_2": "<p>Cards and letters for our service members can be sent to the same address. We'll forward them. TS2 is coordinated by David Pierson; reach him through the Post.</p>"
     }
   }
 }

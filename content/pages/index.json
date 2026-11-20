@@ -32,7 +32,7 @@
   "s3": {
     "small_label": "Who we are",
     "heading": "A close-knit family, serving a close-knit town",
-    "text": "<p>Here in Cambria, the word “family” means something special. Post 432 is a group of men and women who come together to honor and serve our veterans, support our community and look out for one another. Because Cambria is a small and somewhat isolated town, we believe in taking care of each other — we work together, share meals, celebrate together and lend a hand whenever it's needed.</p><p>When you join us, you may find you receive far more than you give: wonderful people, inspiring speakers, a chance to cook, bake or barbecue, to support local kids, and to make a real difference right here at home.</p><p><a href=\"about.html\">More about Post 432</a></p>",
+    "text": "<p>Here in Cambria, the word “family” means something special. Post 432 is a group of men and women who come together to honor and serve our veterans, support our community and look out for one another. Because Cambria is a small and somewhat isolated town, we believe in taking care of each other. We work together, share meals, celebrate together and lend a hand whenever it's needed.</p><p>When you join us, you may find you receive far more than you give: wonderful people, inspiring speakers, a chance to cook, bake or barbecue, to support local kids, and to make a real difference right here at home.</p><p><a href=\"about.html\">More about Post 432</a></p>",
     "photo": "/media/images/picnic-flag-raising.jpg",
     "photo_alt": "Two Legionnaires raise the American flag at the Picnic in the Park.",
     "photo_2": "/media/images/club-kitchen.jpg",
@@ -50,20 +50,20 @@
   },
   "s6": {
     "small_label": "What we do",
-    "heading": "Serving those who served — and the town we love",
+    "heading": "Serving those who served, and the town we love",
     "box_1": {
       "photo": "/media/images/ts2-main-street-board.jpg",
       "photo_alt": "The Troop Support board on Main Street listing local service members.",
       "small_label": "Since 2005",
       "heading": "Troop Support Services (TS2)",
-      "text": "Standing by local service members from Cambria, Cayucos and San Simeon — and the families waiting for them at home."
+      "text": "Standing by local service members from Cambria, Cayucos and San Simeon, and the families waiting for them at home."
     },
     "box_2": {
       "photo": "/media/images/picnic-kids-games.jpg",
       "photo_alt": "Children run a sack race on the lawn at Shamel Park.",
       "small_label": "Every Fourth of July",
       "heading": "Picnic in the Park",
-      "text": "Cambria's Independence Day tradition at Shamel Park — ceremony, food, music, games and the famous pie eating contest."
+      "text": "Cambria's Independence Day tradition at Shamel Park: ceremony, food, music, games and the famous pie eating contest."
     },
     "box_3": {
       "photo": "/media/images/flag-memorial-day.jpg",
@@ -84,7 +84,7 @@
       "photo_alt": "A Legionnaire in his Post cap reads at the microphone during a ceremony.",
       "small_label": "Remembrance",
       "heading": "Memorial Day & Veterans Day",
-      "text": "Ceremonies honoring the fallen, and our Post Everlasting — comrades we will never forget."
+      "text": "Ceremonies honoring the fallen, and our Post Everlasting, the comrades we will never forget."
     },
     "box_6": {
       "photo": "/media/images/sal-grill.jpg",
@@ -113,7 +113,7 @@
   },
   "s8": {
     "heading": "Served at least one day of active duty since 1941?",
-    "text": "<p>You're eligible for The American Legion — and we'd love to welcome you to Post 432.</p>",
+    "text": "<p>You're eligible for The American Legion, and we'd love to welcome you to Post 432.</p>",
     "button": "How to join"
   },
   "s9": {
